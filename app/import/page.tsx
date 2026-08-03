@@ -41,6 +41,7 @@ import {
   importDumpStatExportItemsLocal,
   parseDumpStatExportJson,
 } from "@/lib/data/local-import"
+import { importApprovedContent } from "@/lib/data/approved-content"
 import {
   Upload,
   FileText,
@@ -51,6 +52,7 @@ import {
   Info,
   ChevronDown,
   ChevronUp,
+  FolderCheck,
 } from "lucide-react"
 import type { ImportReport } from "@/lib/import/build-import-report"
 import type { ImportTokenSavingsReport } from "@/lib/import/import-route-utils"
@@ -148,6 +150,7 @@ export default function ImportPage() {
   const [pdfStatus, setPdfStatus] = useState<ImportStatus>("idle")
   const [textStatus, setTextStatus] = useState<ImportStatus>("idle")
   const [seedStatus, setSeedStatus] = useState<ImportStatus>("idle")
+  const [approvedStatus, setApprovedStatus] = useState<ImportStatus>("idle")
   const [packStatus, setPackStatus] = useState<ImportStatus>("idle")
   const [packFile, setPackFile] = useState<File | null>(null)
   const [message, setMessage] = useState("")
@@ -942,6 +945,31 @@ export default function ImportPage() {
     }
   }
 
+  const handleApprovedContentImport = async () => {
+    setApprovedStatus("processing")
+    setMessage("")
+
+    try {
+      const data = await importApprovedContent()
+      setApprovedStatus("success")
+      if (data.packs === 0) {
+        setMessage("No approved JSON packs have been published yet.")
+        return
+      }
+      const breakdownText = Object.entries(data.breakdown)
+        .filter(([, count]) => count > 0)
+        .map(([type, count]) => `${count} ${type}`)
+        .join(", ")
+      setMessage(
+        `Loaded ${data.count} items from ${data.packs} approved pack${data.packs === 1 ? "" : "s"}` +
+          `${breakdownText ? `: ${breakdownText}` : ""} into ${getStorageLabel()}`,
+      )
+    } catch (err) {
+      setApprovedStatus("error")
+      setMessage(err instanceof Error ? err.message : "Failed to load approved content.")
+    }
+  }
+
   const getStatusIcon = (status: ImportStatus) => {
     switch (status) {
       case "processing":
@@ -961,6 +989,7 @@ export default function ImportPage() {
   const isSuccessMessage =
     pdfStatus === "success" ||
     seedStatus === "success" ||
+    approvedStatus === "success" ||
     textStatus === "success" ||
     packStatus === "success"
 
@@ -976,7 +1005,32 @@ export default function ImportPage() {
 
       <main id="import-main" className="relative max-w-4xl mx-auto px-4 py-8">
         {/* SRD quickseed — upper right (in-flow on mobile, floating on sm+) */}
-        <div className="flex justify-end mb-4 sm:mb-0 sm:absolute sm:top-8 sm:right-4 z-20">
+        <div className="flex flex-wrap justify-end gap-2 mb-4 md:mb-0 md:absolute md:top-8 md:right-4 z-20">
+          {staticMode ? (
+            <button
+              type="button"
+              onClick={handleApprovedContentImport}
+              disabled={approvedStatus === "processing"}
+              className="flex items-center gap-2 px-4 py-2.5 bg-card text-foreground border border-primary/30 rounded-xl font-bold text-sm shadow-lg hover:bg-primary/10 transition-colors disabled:opacity-50 whitespace-nowrap"
+              title="Load JSON packs published in the repository's approved-content folder"
+            >
+              {approvedStatus === "processing" ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : approvedStatus === "success" ? (
+                <CheckCircle className="w-5 h-5 text-success" />
+              ) : approvedStatus === "error" ? (
+                <AlertCircle className="w-5 h-5 text-destructive" />
+              ) : (
+                <FolderCheck className="w-5 h-5 text-primary" />
+              )}
+              <span className="hidden sm:inline">
+                {approvedStatus === "processing" ? "Loading..." : "Load Approved Content"}
+              </span>
+              <span className="sm:hidden">
+                {approvedStatus === "processing" ? "Loading..." : "Approved Content"}
+              </span>
+            </button>
+          ) : null}
           <div className="relative">
             <button
               type="button"
@@ -1027,7 +1081,7 @@ export default function ImportPage() {
           </div>
         </div>
 
-        <div id="import-header" className="mb-8 sm:pr-56">
+        <div id="import-header" className="mb-8 md:pr-[28rem]">
           <h1 className="text-4xl font-black text-foreground">Import Content</h1>
           {staticMode && (
             <p className={`${pageFloatingHintClass} mt-2`}>

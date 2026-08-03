@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "eslint .",
     "icons:manifest": "node scripts/build-icon-manifest.mjs",
+    "approved:manifest": "node scripts/build-approved-content-manifest.mjs",
     "images:optimize": "node scripts/optimize-site-images.mjs",
     "images:page-backgrounds": "node scripts/optimize-site-images.mjs",
     "db:setup": "node scripts/setup-local-mysql.mjs",

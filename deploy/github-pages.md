@@ -53,6 +53,7 @@ In repository settings → Pages, set source to **GitHub Actions**.
 - **First visit** auto-loads bundled SRD content into IndexedDB.
 - **Clearing site data** resets the compendium and characters.
 - **Export/import JSON packs** (Import page or Settings menu) to move content between devices.
+- **Approved Content** loads every Dump Stat JSON pack published under `public/approved-content/` into the current device. The static build generates the folder manifest automatically.
 - **Not available**: PDF/text AI import, web URL import, server seed API.
 
 ## Hosted vs static

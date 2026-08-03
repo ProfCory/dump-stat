@@ -28,6 +28,7 @@ function run(label, cmd, args, extraEnv = {}) {
   }
 }
 
+run("Approved content manifest", "node", ["scripts/build-approved-content-manifest.mjs"])
 run("Icon manifest", "node", ["scripts/build-icon-manifest.mjs"])
 run("Prepare static routes", "node", ["scripts/prepare-static-build.mjs"])
 run("Next.js static export", "pnpm", ["exec", "next", "build"])

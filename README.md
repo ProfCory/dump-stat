@@ -524,6 +524,8 @@ No database server required. Data lives in the visitor's browser.
 
 **Static mode includes:** builder, characters, compendium, bundled SRD on first visit, JSON pack import/export.
 
+**DM-approved cross-device content:** add Dump Stat export files to `public/approved-content/` and push to `main`. The static build generates a manifest automatically; players use **Import → Load Approved Content** to copy those packs into browser storage on any device. See [`public/approved-content/README.md`](public/approved-content/README.md).
+
 **Static mode excludes:** PDF/text server AI import, server seed API. JSON paste (Dump Stat exports, Foundry, BYO LLM) still works. Use JSON exports from a hosted instance to share custom content.
 
 Environment variables for static builds are documented in [.env.example](.env.example).
