@@ -53,6 +53,7 @@ import {
   ChevronDown,
   ChevronUp,
   FolderCheck,
+  Plus,
 } from "lucide-react"
 import type { ImportReport } from "@/lib/import/build-import-report"
 import type { ImportTokenSavingsReport } from "@/lib/import/import-route-utils"
@@ -1007,29 +1008,41 @@ export default function ImportPage() {
         {/* SRD quickseed — upper right (in-flow on mobile, floating on sm+) */}
         <div className="flex flex-wrap justify-end gap-2 mb-4 md:mb-0 md:absolute md:top-8 md:right-4 z-20">
           {staticMode ? (
-            <button
-              type="button"
-              onClick={handleApprovedContentImport}
-              disabled={approvedStatus === "processing"}
-              className="flex items-center gap-2 px-4 py-2.5 bg-card text-foreground border border-primary/30 rounded-xl font-bold text-sm shadow-lg hover:bg-primary/10 transition-colors disabled:opacity-50 whitespace-nowrap"
-              title="Load JSON packs published in the repository's approved-content folder"
-            >
-              {approvedStatus === "processing" ? (
-                <Loader2 className="w-5 h-5 animate-spin" />
-              ) : approvedStatus === "success" ? (
-                <CheckCircle className="w-5 h-5 text-success" />
-              ) : approvedStatus === "error" ? (
-                <AlertCircle className="w-5 h-5 text-destructive" />
-              ) : (
-                <FolderCheck className="w-5 h-5 text-primary" />
-              )}
-              <span className="hidden sm:inline">
-                {approvedStatus === "processing" ? "Loading..." : "Load Approved Content"}
-              </span>
-              <span className="sm:hidden">
-                {approvedStatus === "processing" ? "Loading..." : "Approved Content"}
-              </span>
-            </button>
+            <div className="flex items-stretch">
+              <button
+                type="button"
+                onClick={handleApprovedContentImport}
+                disabled={approvedStatus === "processing"}
+                className="flex items-center gap-2 px-4 py-2.5 bg-card text-foreground border border-primary/30 rounded-l-xl font-bold text-sm shadow-lg hover:bg-primary/10 transition-colors disabled:opacity-50 whitespace-nowrap"
+                title="Load JSON packs published in the repository's approved-content folder"
+              >
+                {approvedStatus === "processing" ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : approvedStatus === "success" ? (
+                  <CheckCircle className="w-5 h-5 text-success" />
+                ) : approvedStatus === "error" ? (
+                  <AlertCircle className="w-5 h-5 text-destructive" />
+                ) : (
+                  <FolderCheck className="w-5 h-5 text-primary" />
+                )}
+                <span className="hidden sm:inline">
+                  {approvedStatus === "processing" ? "Loading..." : "Load Approved Content"}
+                </span>
+                <span className="sm:hidden">
+                  {approvedStatus === "processing" ? "Loading..." : "Approved Content"}
+                </span>
+              </button>
+              <a
+                href="https://github.com/ProfCory/dump-stat/upload/main/public/approved-content"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Add JSON file to approved content"
+                title="Add a JSON file to the shared approved-content folder on GitHub"
+                className="flex items-center justify-center px-3 bg-primary text-primary-foreground border border-l-0 border-primary/30 rounded-r-xl shadow-lg hover:bg-primary/90 transition-colors"
+              >
+                <Plus className="w-5 h-5" />
+              </a>
+            </div>
           ) : null}
           <div className="relative">
             <button
