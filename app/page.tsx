@@ -356,7 +356,10 @@ export default function HomePage() {
         </section>
       </main>
 
-      <SiteFooter id="home-footer" />
+      <SiteFooter
+        id="home-footer"
+        className="mt-auto w-full shrink-0 border-t border-[#d0b478]/20 bg-[#0a0908] px-4 py-5 [--foreground:#ece3d2] [--muted-foreground:#b9ad99] [--primary:#edcd85]"
+      />
     </div>
   )
 }
