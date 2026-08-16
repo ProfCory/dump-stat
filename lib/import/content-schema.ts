@@ -791,6 +791,10 @@ export const AbilityImportSchema = z.object({
       "bomb_formula",
       "discovery",
       "alchemist_bomb",
+      "breakthrough",
+      "setback",
+      "power",
+      "at_will",
     ])
     .optional(),
   mechanics: z.array(ImportMechanicSchema).optional(),

@@ -6,6 +6,7 @@ import { useSearchParams, useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { MainNav } from "@/components/main-nav"
+import { SourcebookBanner } from "@/components/sourcebook-banner"
 import {
   pageFloatingHintClass,
   pageHeaderSubtitleClass,
@@ -1334,11 +1335,15 @@ const UNASSIGNED_SPELL_CLASS = "__unassigned__"
   return (
     <div id="compendium-root" className="min-h-screen bg-background flex flex-col">
       <MainNav />
-      
+      <SourcebookBanner
+        eyebrow="The compendium"
+        title="Compendium"
+        description="Browse the bundled SRD, edit its entries, and add the homebrew rules that belong at your table."
+      />
+
       <main id="compendium-main" className="max-w-7xl mx-auto px-4 py-8">
         <div id="compendium-header" className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between mb-8">
           <div className="min-w-0">
-            <h1 className="text-4xl font-black text-foreground mb-2">Compendium</h1>
             <p className={pageHeaderSubtitleClass}>Browse and edit all available D&D content</p>
           </div>
           <div className="flex w-full min-w-0 flex-wrap items-center gap-1.5 sm:w-auto sm:flex-nowrap sm:gap-2 sm:self-start">

@@ -96,6 +96,10 @@ const ABILITY_ROLE_LABELS: Record<string, string> = {
   bomb_formula: "Bomb formula",
   discovery: "Discovery",
   alchemist_bomb: "Alchemist bomb",
+  breakthrough: "Breakthrough (Unlocked)",
+  setback: "Setback (Unlocked)",
+  power: "Power (Unlocked)",
+  at_will: "At-Will (Unlocked)",
 }
 
 function abilityRoleLabel(role: string): string {

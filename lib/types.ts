@@ -747,7 +747,12 @@ export interface CustomAbility {
    */
   specialization_choices?: FeatureChoice | null
   level_requirement?: number | null
-  /** discipline | psionic_power | talent_pool | class_talent | knack | bomb_formula | discovery | alchemist_bomb — guides builder aggregation. */
+  /**
+   * discipline | psionic_power | talent_pool | class_talent | knack | upgrade | bomb_formula |
+   * discovery | alchemist_bomb | breakthrough | setback | power | at_will — guides builder
+   * aggregation. The Unlocked-class roles (breakthrough/power/at_will) are pick-gated pool
+   * entries; setback is imposed and applies while present (see isPickGatedAbilityRole).
+   */
   ability_role?:
     | "discipline"
     | "psionic_power"
@@ -758,6 +763,10 @@ export interface CustomAbility {
     | "bomb_formula"
     | "discovery"
     | "alchemist_bomb"
+    | "breakthrough"
+    | "setback"
+    | "power"
+    | "at_will"
     | null
   /** When true, the character may learn this knack more than once. */
   repeatable?: boolean | null

@@ -15,6 +15,10 @@ function namesMatch(a: string, b: string): boolean {
 /**
  * Roles that represent a player-chosen pool entry. These must be unlocked via
  * feature/feat picks or grant_custom_ability before their modifiers apply.
+ *
+ * Note: the Unlocked class's `setback` role is deliberately excluded — a Setback
+ * is imposed on the character (not chosen from a pool), so it applies while it is
+ * present rather than being gated behind a pick.
  */
 export function isPickGatedAbilityRole(role: string | null | undefined): boolean {
   return (
@@ -23,7 +27,10 @@ export function isPickGatedAbilityRole(role: string | null | undefined): boolean
     role === "upgrade" ||
     role === "class_talent" ||
     role === "bomb_formula" ||
-    role === "discovery"
+    role === "discovery" ||
+    role === "breakthrough" ||
+    role === "power" ||
+    role === "at_will"
   )
 }
 

@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo, useRef } from "react"
 import { motion } from "framer-motion"
 import { MainNav } from "@/components/main-nav"
+import { SourcebookBanner } from "@/components/sourcebook-banner"
 import { pageHeaderStatBadgeClass, pageFloatingHintClass } from "@/lib/compendium/editor-field-styles"
 import { SiteFooter } from "@/components/site-footer"
 import { createClient } from "@/lib/db/client"
@@ -221,11 +222,15 @@ export default function CharactersPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <MainNav />
-      
+      <SourcebookBanner
+        eyebrow="The roster"
+        title="My Characters"
+        description="Every hero you've built, ready to open, import, or take to the table."
+      />
+
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8 flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h1 className="text-4xl font-black text-foreground mb-2">My Characters</h1>
             <p className={pageHeaderStatBadgeClass}>
               {loading
                 ? "Loading..."
