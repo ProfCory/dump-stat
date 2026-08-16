@@ -805,7 +805,7 @@ const UsesAtLevelImportSchema = z.object({
   count: z.number(),
 })
 
-const UsesConfigImportSchema = z.object({
+export const UsesConfigImportSchema = z.object({
   type: z.enum([
     "fixed",
     "proficiency",

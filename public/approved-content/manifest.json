@@ -1,4 +1,13 @@
 {
   "version": 1,
-  "packs": []
+  "packs": [
+    {
+      "file": "Core01.json",
+      "label": "Core01"
+    },
+    {
+      "file": "Unlocked.json",
+      "label": "Unlocked"
+    }
+  ]
 }
