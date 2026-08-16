@@ -1,0 +1,241 @@
+{
+  "type": "dump-stat-export",
+  "version": 1,
+  "section": "Unlocked Subclass Breakthroughs",
+  "items": [
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Read the Room",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 6,
+        "prerequisites": "Face 6+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> As a brief study of a social space, learn the general power dynamics: who defers to whom, who is nervous, and who holds real authority. A number of times equal to your Proficiency Bonus per Long Rest you may gain advantage on an Insight or Persuasion check made to act on what you read.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Practiced De-escalation",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 6,
+        "prerequisites": "Face 6+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> When a tense social situation is about to turn violent, you may make a Charisma check to give one creature or small group pause. On a success they hesitate until the end of your next turn, buying time to talk, leave, or reposition. Ineffective against creatures already committed to attacking or immune to being reasoned with.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Reputation Precedes You",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 14,
+        "prerequisites": "Face 14+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> You cultivate a reputation — earned or manufactured — that arrives before you do. Once per Long Rest, in a community where your reputation could plausibly have spread, you may treat one social interaction's starting attitude as one step more favorable, or invoke your name to gain advantage on a single Charisma check.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Compelling Presence",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 14,
+        "prerequisites": "Face 14+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> As an action, focus your presence on one creature that can hear and understand you. It makes a Wisdom save against your Charisma-based DC; on a failure it cannot take hostile action against you until the end of your next turn unless you or your allies harm it first. Once per creature per Short Rest.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Master Negotiator",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 18,
+        "prerequisites": "Face 18+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> Once per Long Rest you may reroll a failed Charisma check and take the new result, or broker a brief truce: creatures willing to bargain agree to a short cessation of hostilities on terms you propose, until someone breaks them.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Social Web",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Face"],
+        "level_requirement": 18,
+        "prerequisites": "Face 18+",
+        "description": "<p><strong>Face Subclass Breakthrough.</strong> You maintain a web of contacts across the places you have worked. In most settlements, given a little time, you can locate someone who owes you, fears you, or wants your favor — a source of information, shelter, or a modest favor appropriate to the setting, at the GM's discretion.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Contortionist",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 6,
+        "prerequisites": "Dip 6+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> You can squeeze through any gap large enough for your head, and you have advantage on checks to escape restraints, grapples, or confinement. Moving through a space one size smaller than you costs no extra movement.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Silent Runner",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 6,
+        "prerequisites": "Dip 6+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> A number of times equal to your Proficiency Bonus per Long Rest, you may take the Dash action while remaining Hidden without the usual penalty for moving quickly, provided you end behind cover or concealment.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Wall Runner",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 14,
+        "prerequisites": "Dip 14+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> During your movement you may briefly travel along vertical surfaces or across unstable footing (narrow ledges, taut rope, sliding debris) as if it were normal ground, provided you end your turn on a surface that can support you.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Ghost Through the Gap",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 14,
+        "prerequisites": "Dip 14+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> When an attack misses you, you may use your Reaction to move up to 10 feet without provoking Opportunity Attacks, slipping through the opening the miss created.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Untouchable",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 18,
+        "prerequisites": "Dip 18+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> Once per round, when a creature you can see attacks you, you may impose disadvantage on that attack roll through sheer footwork and anticipation, provided you are not restrained or incapacitated.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Perfect Infiltration",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Dip"],
+        "level_requirement": 18,
+        "prerequisites": "Dip 18+",
+        "description": "<p><strong>Dip Subclass Breakthrough.</strong> Once per Long Rest, you may bypass a single mundane security layer you have had time to study — a lock, patrol pattern, alarm, or checkpoint — without a check, treating your approach as flawless. It never defeats unique, magical, or plot-critical barriers.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Weakness Analysis",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 6,
+        "prerequisites": "Planner 6+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> As a Bonus Action, study one creature or structure you can see. The Sheet reports one exploitable detail it has enough information to infer — a resistance or vulnerability you've witnessed, a structural weak point, or a behavioral tell. You have advantage on your next check or attack that acts on that detail before the end of your next turn.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Contingency Plan",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 6,
+        "prerequisites": "Planner 6+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> A number of times equal to your Proficiency Bonus per Long Rest, you may declare a simple contingency (\"if X happens, I do Y\"). When its trigger occurs before your next turn, you may take the prepared response as a Reaction even if you did not use your action to Ready it.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Predict Movement",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 14,
+        "prerequisites": "Planner 14+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> On your turn you may designate a 10-foot zone you can see. Until the start of your next turn, you and your allies have advantage on the first attack against any creature that enters or starts its turn in that zone, as your analysis calls the play.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Structural Insight",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 14,
+        "prerequisites": "Planner 14+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> After a short examination of a building, machine, or environment, the Sheet identifies the fastest safe route through it and any one obvious hidden mechanism, maintenance access, or structural shortcut that is actually present.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Master Strategist",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 18,
+        "prerequisites": "Planner 18+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> Once per Long Rest, spend a minute briefing your allies. Until the end of the next combat that begins within the hour, each briefed ally may once treat a failed attack, check, or save as though it had rolled a Wild Die and taken the higher result — the plan accounting for what they could not.</p>"
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Precomputed Outcome",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "breakthrough",
+        "eligible_classes": ["The Planner"],
+        "level_requirement": 18,
+        "prerequisites": "Planner 18+",
+        "description": "<p><strong>Planner Subclass Breakthrough.</strong> Once per Long Rest, before you roll a d20 Test whose circumstances you have had time to analyze, you may declare a Precomputed Outcome and use the maximum value of your Wild Die in place of the d20 roll, then apply modifiers. You must commit before rolling.</p>"
+      }
+    }
+  ]
+}

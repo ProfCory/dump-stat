@@ -368,6 +368,7 @@ export const ChoiceOptionsSchema = z.object({
       "class_breakthroughs",
       "class_powers",
       "class_at_wills",
+      "class_subclass_breakthroughs",
     ])
     .nullable()
     .optional(),
