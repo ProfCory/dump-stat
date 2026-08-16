@@ -1,0 +1,355 @@
+{
+  "type": "dump-stat-export",
+  "version": 1,
+  "section": "Unlocked",
+  "items": [
+    {
+      "type": "dnd-class",
+      "version": 1,
+      "data": {
+        "name": "Unlocked",
+        "source": "Unlocked (Homebrew)",
+        "complexity": "hard",
+        "card_blurb": "Encounter possibility, break through, adapt to any world's rules.",
+        "description": "<p>The <strong>Unlocked</strong> are exceptions. Every realm has its own laws — of magic, physics, technology, biology, spirit, and what a person is allowed to become — and the Unlocked are unusually capable of adapting to those laws. They learn by encountering possibility: a spell cast, a blaster fired, a lock defeated, a mind read. What they meaningfully encounter can eventually become something their Unlocked Sheet records and, with the right Breakthrough, allows them to use.</p><p><strong>Core principle:</strong> Breakthroughs create permission. Powers create capability.</p><p><strong>Primary Ability:</strong> Choose Charisma, Dexterity, or Intelligence when you make this character. Your choice determines one saving-throw proficiency (the other is Constitution) and points toward your subclass at 3rd level — The Face (Charisma), The Dip (Dexterity), or The Planner (Intelligence). Once chosen, your Primary Ability normally cannot be changed. (The builder does not yet enforce this choice mechanically; set your second saving-throw proficiency and subclass to match your Primary Ability.)</p><h3>The Unlocked Table</h3><table><thead><tr><th>Level</th><th>PB</th><th>Features</th><th>Wild Die</th><th>At-Will</th><th>Prepared Powers</th><th>Power Limit</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>1</td><td>+2</td><td>Unlocked Sheet, Innate Breakthroughs</td><td>—</td><td>3</td><td>2</td><td>1</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>2</td><td>+2</td><td>Wild Die; 1 Breakthrough</td><td>d4</td><td>4</td><td>4</td><td>1</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>3</td><td>+2</td><td>Subclass; 1 Breakthrough</td><td>d4</td><td>4</td><td>6</td><td>2</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>4</td><td>+2</td><td>ASI; 1 Breakthrough</td><td>d4</td><td>4</td><td>7</td><td>2</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>5</td><td>+3</td><td>Focused Restoration; 1 Breakthrough</td><td>d4</td><td>5</td><td>9</td><td>3</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>6</td><td>+3</td><td>1 Subclass Breakthrough; 1 Breakthrough</td><td>d6</td><td>5</td><td>10</td><td>3</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>7</td><td>+3</td><td>2 Breakthroughs</td><td>d6</td><td>5</td><td>11</td><td>4</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>8</td><td>+3</td><td>ASI; 1 Breakthrough</td><td>d6</td><td>6</td><td>12</td><td>4</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>9</td><td>+4</td><td>2 Breakthroughs</td><td>d6</td><td>6</td><td>14</td><td>5</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>10</td><td>+4</td><td>Extra Action; 1 Breakthrough</td><td>d8</td><td>6</td><td>15</td><td>5</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>11</td><td>+4</td><td>2 Breakthroughs</td><td>d8</td><td>7</td><td>16</td><td>6</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>—</td><td>—</td><td>—</td></tr><tr><td>12</td><td>+4</td><td>ASI; 1 Breakthrough</td><td>d8</td><td>7</td><td>16</td><td>6</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>—</td><td>—</td><td>—</td></tr><tr><td>13</td><td>+5</td><td>Enhanced Focused Restoration; 1 Breakthrough</td><td>d8</td><td>7</td><td>17</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>14</td><td>+5</td><td>1 Subclass Breakthrough; 1 Breakthrough</td><td>d10</td><td>8</td><td>17</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>15</td><td>+5</td><td>2 Breakthroughs</td><td>d10</td><td>8</td><td>18</td><td>8</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>—</td></tr><tr><td>16</td><td>+5</td><td>ASI; 1 Breakthrough</td><td>d10</td><td>8</td><td>18</td><td>8</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>—</td></tr><tr><td>17</td><td>+6</td><td>Extra Action; 1 Breakthrough</td><td>d10</td><td>9</td><td>19</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>18</td><td>+6</td><td>1 Subclass Breakthrough; 1 Breakthrough</td><td>d12</td><td>9</td><td>20</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>19</td><td>+6</td><td>Epic Unlock</td><td>d12</td><td>9</td><td>21</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td></tr><tr><td>20</td><td>+6</td><td>Create Breakthrough</td><td>d12</td><td>10</td><td>22</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td></tr></tbody></table>",
+        "hit_die": 6,
+        "primary_ability": ["Charisma", "Dexterity", "Intelligence"],
+        "saving_throws": ["Constitution"],
+        "armor_proficiencies": [],
+        "weapon_proficiencies": ["Simple weapons"],
+        "skill_choices": {
+          "count": 2,
+          "options": ["Arcana", "Sleight of Hand", "Stealth", "Deception", "Insight", "Investigation", "Persuasion", "Religion"]
+        },
+        "starting_gold": 50,
+        "spellcasting": null,
+        "features": [
+          {
+            "level": 1,
+            "name": "Unlocked Sheet",
+            "description": "<p>You possess a HUD only you can normally perceive: your character sheet made real. Consulting or manipulating the Sheet requires no action and can be done at any time while you are conscious, even outside your turn.</p><p>The Sheet can display mechanical information about you — ability scores and modifiers, current and maximum Hit Points, conditions, proficiencies, At-Wills, Prepared Powers, remaining Power uses, Power Limit, Breakthroughs, Setbacks, subclass features, Wild Die, and other mechanical information relating directly to your character. It is deliberately exact in a way that feels unnatural in-world, and it does not automatically reveal hidden information about other creatures or the world. It tells you about yourself, what you have access to, and possibilities you have meaningfully encountered.</p>"
+          },
+          {
+            "level": 1,
+            "name": "Innate Breakthroughs",
+            "description": "<p>Whenever you directly encounter a meaningful capability, discipline, supernatural effect, unusual technology, biological trait, combat technique, social method, or other exceptional rule of the world, the GM may allow the Sheet to register it. Registration does not automatically grant the capability — the Sheet may identify it as a potential Breakthrough, a possible At-Will or Power, a capability connected to a Breakthrough you already possess, an option locked behind a prerequisite, or something beyond your current Power Limit. You do not need to understand why a registered capability works, only that it can.</p>"
+          },
+          {
+            "level": 2,
+            "name": "Wild Die",
+            "description": "<p>Whenever you make a d20 Test, roll your Wild Die alongside the d20 and compare the two natural, unmodified results. If the Wild Die result is higher, you may use it instead of the d20 result; then apply all normal modifiers. Your Wild Die is never expended, requires no action, and applies to attack rolls, saving throws, and ability checks. It scales as shown on the Unlocked table (d4 at 2nd, d6 at 6th, d8 at 10th, d10 at 14th, d12 at 18th).</p><p>The Wild Die does not count as a natural 20 or natural 1, a critical hit, or any effect that requires a particular natural d20 result — it replaces only the numerical result used to resolve the Test.</p>"
+          },
+          {
+            "level": 2,
+            "name": "Unlocked Breakthroughs",
+            "description": "<p>Beginning at 2nd level you gain Unlocked Breakthroughs as shown on the class table (cumulative totals: 1 at 2nd rising to 21 by 18th). A <strong>Breakthrough</strong> (BT) is a permanent expansion in what your character can access, learn, prepare, use, or become — usually smaller than a conventional feat. Most follow one of two shapes:</p><ul><li><strong>Competency Breakthrough:</strong> gain one or two proficiencies, learned skills, or techniques, usually with one small thematic benefit.</li><li><strong>Gateway Breakthrough:</strong> gain access to a new governed rule, subsystem, discipline, or capability (e.g. Spellcasting, a martial art, firearms, psychic techniques, starship operation). A Gateway BT commonly functions as a prerequisite for related At-Wills, Powers, and further Breakthroughs.</li></ul><p>Breakthroughs never directly increase an Ability Score. If you gain a <strong>Setback</strong> before your next Unlocked level, resolve it at that level-up: <em>Overcome</em> (spend one Breakthrough gained at that level to remove it) or <em>Integrate</em> (keep it and gain one additional Breakthrough at that level). Subclass Breakthroughs at 6th/14th/18th are chosen separately from your subclass's own list.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Breakthrough",
+              "count": 1,
+              "options": [],
+              "optionsSource": "class_breakthroughs",
+              "choiceCountByLevel": [
+                { "level": 2, "count": 1 },
+                { "level": 3, "count": 2 },
+                { "level": 4, "count": 3 },
+                { "level": 5, "count": 4 },
+                { "level": 6, "count": 5 },
+                { "level": 7, "count": 7 },
+                { "level": 8, "count": 8 },
+                { "level": 9, "count": 10 },
+                { "level": 10, "count": 11 },
+                { "level": 11, "count": 13 },
+                { "level": 12, "count": 14 },
+                { "level": 13, "count": 15 },
+                { "level": 14, "count": 16 },
+                { "level": 15, "count": 18 },
+                { "level": 16, "count": 19 },
+                { "level": 17, "count": 20 },
+                { "level": 18, "count": 21 }
+              ]
+            }
+          },
+          {
+            "level": 1,
+            "name": "At-Wills",
+            "description": "<p>Choose the At-Wills you keep active, as shown on the class table (3 at 1st, rising to 10 at 20th). An At-Will must normally be tied to a Breakthrough, discipline, trait, or governed rule you possess; the GM is the final arbiter of that connection. At-Wills do not expend Power uses.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "At-Will",
+              "count": 3,
+              "options": [],
+              "optionsSource": "class_at_wills",
+              "resourceKey": "at_wills"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Prepared Powers",
+            "description": "<p>Choose the Powers you have prepared and ready, as shown on the class table (2 at 1st, rising to 22 at 20th). You may prepare only Powers whose prerequisites you satisfy and whose tier does not exceed your Power Limit; you reset your prepared Powers when you finish a Long Rest. Track Power uses by tier from the sheet for now.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Power",
+              "count": 2,
+              "options": [],
+              "optionsSource": "class_powers",
+              "resourceKey": "prepared_powers"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Unlocked Subclass",
+            "description": "<p>At 3rd level your Primary Ability develops into an Unlocked subclass: <strong>The Face</strong> (Charisma), <strong>The Dip</strong> (Dexterity), or <strong>The Planner</strong> (Intelligence). Subclasses provide a light specialization and do not restrict your general Breakthrough choices — a Face can become a martial artist, a Dip can learn magic, a Planner can become a thief.</p><p>At 6th, 14th, and 18th level you gain a <strong>Subclass Breakthrough</strong> chosen from your subclass's own growing BT list (roughly three new options appear at each of those tiers; you may instead take an earlier subclass BT you skipped). Subclass BTs may carry prerequisites such as “Face 6+” and may be somewhat stronger than ordinary Breakthroughs.</p>"
+          },
+          {
+            "level": 4,
+            "name": "Ability Score Improvement",
+            "description": "<p>Increase one Ability Score of your choice by 2, or two Ability Scores by 1 each, up to the campaign's normal maximum. If your table uses feats, you may take one instead if the GM allows it. No Unlocked Breakthrough may directly increase an Ability Score.</p>"
+          },
+          {
+            "level": 5,
+            "name": "Focused Restoration",
+            "description": "<p>During a Short Rest you can restore a portion of your expended Power uses, distributed among Power Levels you can access (no restored use may exceed your current Power Limit), up to a recovery value appropriate to your Unlocked level — intended to function like Arcane Recovery. You can use Focused Restoration once per Long Rest.</p>"
+          },
+          {
+            "level": 8,
+            "name": "Ability Score Improvement",
+            "description": "<p>Increase one Ability Score of your choice by 2, or two Ability Scores by 1 each, up to the campaign's normal maximum. If your table uses feats, you may take one instead if the GM allows it.</p>"
+          },
+          {
+            "level": 10,
+            "name": "Extra Action",
+            "description": "<p>You gain one additional Action on each of your turns. It is a normal Action — not restricted to attacks, movement, or a special list — usable for anything that normally requires an Action, including activating a Power, using an object, helping a creature, or interacting with technology.</p>"
+          },
+          {
+            "level": 12,
+            "name": "Ability Score Improvement",
+            "description": "<p>Increase one Ability Score of your choice by 2, or two Ability Scores by 1 each, up to the campaign's normal maximum. If your table uses feats, you may take one instead if the GM allows it.</p>"
+          },
+          {
+            "level": 13,
+            "name": "Enhanced Focused Restoration",
+            "description": "<p>When you use Focused Restoration, double the total amount of Power you can restore.</p>"
+          },
+          {
+            "level": 16,
+            "name": "Ability Score Improvement",
+            "description": "<p>Increase one Ability Score of your choice by 2, or two Ability Scores by 1 each, up to the campaign's normal maximum. If your table uses feats, you may take one instead if the GM allows it.</p>"
+          },
+          {
+            "level": 17,
+            "name": "Extra Action",
+            "description": "<p>You gain another additional Action on each of your turns — three Actions total before Bonus Actions, Reactions, or other special actions. These Actions have the same freedom as the additional Action granted at 10th level.</p>"
+          },
+          {
+            "level": 19,
+            "name": "Epic Unlock",
+            "description": "<p>Your Sheet begins recognizing possibilities it previously treated as incompatible with you. Once per Long Rest, you may use Epic Unlock to break one normal boundary of your current capabilities — e.g. using a Power that exceeds a normal restriction, manifesting a species-like trait, accessing regeneration, adopting Trance-like sleep, expressing a supernatural sense, or another exceptional capability approved by the GM. Whenever possible the capability should still be inspired by something you have meaningfully encountered.</p>"
+          },
+          {
+            "level": 20,
+            "name": "Create Breakthrough",
+            "description": "<p>You and your GM design a wholly custom Breakthrough representing a capability no existing entry adequately describes. It may combine existing concepts, ignore a normal prerequisite, formalize a unique adaptation, create a new governed rule, or produce an effect approaching the scale of your maximum Power Limit. In plain language: this is your wish, expressed as part of what you have become.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "wild_die",
+        "name": "Wild Die",
+        "description": "Rolled alongside every d20 Test; if its natural result is higher you may use it instead, then apply modifiers. Never expended. Die size scales with Unlocked level.",
+        "uses": {
+          "type": "special",
+          "specialDescription": "Roll alongside each d20 Test; take the higher natural result. Not expended.",
+          "dieType": "d4",
+          "dieSidesByLevel": [
+            { "level": 2, "count": 4 },
+            { "level": 6, "count": 6 },
+            { "level": 10, "count": 8 },
+            { "level": 14, "count": 10 },
+            { "level": 18, "count": 12 }
+          ]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_limit",
+        "name": "Power Limit",
+        "description": "The highest tier of Power you can prepare and use normally. Source-agnostic — a level-3 spell, psychic technique, firearm maneuver, and physical enhancement all share the same Power Limit framework.",
+        "uses": {
+          "type": "special",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 1, "count": 1 },
+            { "level": 3, "count": 2 },
+            { "level": 5, "count": 3 },
+            { "level": 7, "count": 4 },
+            { "level": 9, "count": 5 },
+            { "level": 11, "count": 6 },
+            { "level": 13, "count": 7 },
+            { "level": 15, "count": 8 },
+            { "level": 17, "count": 9 }
+          ]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "prepared_powers",
+        "name": "Prepared Powers",
+        "description": "How many Powers you currently know and have ready for use. You may prepare only Powers whose prerequisites you satisfy. Reset when you finish a Long Rest.",
+        "uses": {
+          "type": "special",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 1, "count": 2 },
+            { "level": 2, "count": 4 },
+            { "level": 3, "count": 6 },
+            { "level": 4, "count": 7 },
+            { "level": 5, "count": 9 },
+            { "level": 6, "count": 10 },
+            { "level": 7, "count": 11 },
+            { "level": 8, "count": 12 },
+            { "level": 9, "count": 14 },
+            { "level": 10, "count": 15 },
+            { "level": 11, "count": 16 },
+            { "level": 13, "count": 17 },
+            { "level": 15, "count": 18 },
+            { "level": 17, "count": 19 },
+            { "level": 18, "count": 20 },
+            { "level": 19, "count": 21 },
+            { "level": 20, "count": 22 }
+          ]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "at_wills",
+        "name": "At-Wills",
+        "description": "Minor, repeatable expressions of capabilities you have already unlocked; they do not expend Power uses. Each must normally be tied to a Breakthrough, discipline, trait, or governed rule you possess.",
+        "uses": {
+          "type": "special",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 1, "count": 3 },
+            { "level": 2, "count": 4 },
+            { "level": 5, "count": 5 },
+            { "level": 8, "count": 6 },
+            { "level": 11, "count": 7 },
+            { "level": 14, "count": 8 },
+            { "level": 17, "count": 9 },
+            { "level": 20, "count": 10 }
+          ]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_uses",
+        "name": "Power Uses",
+        "description": "Separate pools of Power uses by tier (Power Levels 1–9). A Power normally consumes one use of the tier at which it is activated; you regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest). Per-level breakdown (tier 1–9): L1 2; L2 3; L3 4/2; L4 4/3; L5 4/3/2; L6 4/3/3; L7 4/3/3/1; L8 4/3/3/2; L9 4/3/3/3/1; L10 4/3/3/3/2; L11 4/3/3/3/2/1; L12 4/3/3/3/2/1; L13 4/3/3/3/2/1/1; L14 4/3/3/3/2/1/1; L15 4/3/3/3/2/1/1/1; L16 4/3/3/3/2/1/1/1; L17 4/3/3/3/2/1/1/1/1; L18 4/3/3/3/3/1/1/1/1; L19 4/3/3/3/3/2/1/1/1; L20 4/3/3/3/3/2/2/1/1. Per-tier spend tracking is planned for a later update; track uses from the sheet for now.",
+        "uses": {
+          "type": "special",
+          "specialDescription": "Per-tier Power-use pools; see description for the full per-level table."
+        }
+      }
+    },
+    {
+      "type": "dnd-subclass",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "name": "The Face",
+        "source": "Unlocked (Homebrew)",
+        "card_blurb": "Charisma — interpersonal mastery, redirection, and social access.",
+        "description": "<p><strong>Charisma.</strong> Theme: Interpersonal Mastery &amp; Rapport. A Face manages social encounters, redirection, de-escalation, social access, and information gathering through civilian or diplomatic channels. A Face need not be pleasant — diplomat, interrogator, con artist, fixer, negotiator, or social predator all qualify.</p>",
+        "features": [
+          {
+            "level": 3,
+            "name": "Face Instinct",
+            "description": "<p>A number of times equal to your Proficiency Bonus per Long Rest, when you make a Charisma-based d20 Test you may invoke Face Instinct: roll your Wild Die and add the result to the Test. This is separate from the normal Wild Die replacement rule; if you use both on the same Test, first resolve which die result you use for the Test, then add the Face Instinct Wild Die bonus.</p>"
+          },
+          {
+            "level": 6,
+            "name": "Face Subclass Breakthroughs",
+            "description": "<p>Face Breakthroughs emphasize rapport, redirection, de-escalation, gathering information, reputation, social momentum, misdirection, civilian access, reading intent, and conversational control. At each subclass advancement (6th, 14th, 18th) roughly three new Face BTs appropriate to that tier become available; you may take a newly available BT or an earlier Face BT you skipped.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-subclass",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "name": "The Dip",
+        "source": "Unlocked (Homebrew)",
+        "card_blurb": "Dexterity — fluid motion, fast hands, and infiltration.",
+        "description": "<p><strong>Dexterity.</strong> Theme: Physical Fluidity &amp; Precision. The Dip excels at infiltration, bypassing physical obstacles, rapid object manipulation, and high mobility in tight spaces. Its benefits are narrower than the Face's or Planner's but matter more often during movement and action-heavy play.</p>",
+        "features": [
+          {
+            "level": 3,
+            "name": "Fluid Motion",
+            "description": "<p>You ignore nonmagical Difficult Terrain caused by clutter, obstacles, uneven surfaces, crowds, or similar physical impediments. This does not let you ignore magical terrain, environmental hazards, or terrain that is literally impossible to cross.</p>"
+          },
+          {
+            "level": 3,
+            "name": "Fast Hands",
+            "description": "<p>You may take the Utilize action (or another setting-equivalent action primarily concerned with manipulating an object) as a Bonus Action. The GM determines whether a particular interaction qualifies.</p>"
+          },
+          {
+            "level": 3,
+            "name": "Dip Instinct",
+            "description": "<p>A number of times equal to your Proficiency Bonus per Long Rest, when you make a d20 Test involving Acrobatics, Sleight of Hand, rapid object manipulation, or precise physical movement, you may roll your Wild Die and add the result to the Test. This is separate from the normal Wild Die replacement rule. The GM determines whether an unusual Dexterity-based Test falls within the Dip's specialty.</p>"
+          },
+          {
+            "level": 6,
+            "name": "Dip Subclass Breakthroughs",
+            "description": "<p>Dip Breakthroughs emphasize movement, fast hands, infiltration, object interaction, environmental navigation, precision, positioning, bypassing, tight spaces, and rapid physical adaptation. At each subclass advancement (6th, 14th, 18th) roughly three new Dip BTs appropriate to that tier become available; you may take a newly available BT or an earlier Dip BT you skipped.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-subclass",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "name": "The Planner",
+        "source": "Unlocked (Homebrew)",
+        "card_blurb": "Intelligence — analysis, prediction, and contingency.",
+        "description": "<p><strong>Intelligence.</strong> Theme: Analytical Strategy &amp; Environmental Analysis. The Planner identifies structural flaws, positions tactically, decodes puzzles, understands systems, and predicts enemy behavior.</p>",
+        "features": [
+          {
+            "level": 3,
+            "name": "Planner Instinct",
+            "description": "<p>A number of times equal to your Proficiency Bonus per Long Rest, when you make an Intelligence-based d20 Test you may invoke Planner Instinct: roll your Wild Die and add the result to the Test. This is separate from the normal Wild Die replacement rule; if you use both on the same Test, first resolve which die result you use for the Test, then add the Planner Instinct Wild Die bonus. It can apply to Arcana, Investigation, Religion, other Intelligence-based skills and tools you later acquire, decoding, technical analysis, and Intelligence-based Powers.</p>"
+          },
+          {
+            "level": 6,
+            "name": "Planner Subclass Breakthroughs",
+            "description": "<p>Planner Breakthroughs emphasize analysis, prediction, preparation, structural weaknesses, tactical information, puzzles, devices, environmental advantage, enemy behavior, and contingencies. At each subclass advancement (6th, 14th, 18th) roughly three new Planner BTs appropriate to that tier become available; you may take a newly available BT or an earlier Planner BT you skipped.</p>"
+          }
+        ]
+      }
+    }
+  ]
+}

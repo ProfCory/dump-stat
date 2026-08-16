@@ -42,6 +42,31 @@ describe("picked custom abilities", () => {
     ).toBe(false)
   })
 
+  it("pick-gates Unlocked breakthroughs, powers, and at-wills but not setbacks", () => {
+    expect(
+      isPickGatedCustomAbility(ability({ id: "b1", name: "Spellcasting", ability_role: "breakthrough" })),
+    ).toBe(true)
+    expect(
+      isPickGatedCustomAbility(ability({ id: "p1", name: "Kinetic Push", ability_role: "power" })),
+    ).toBe(true)
+    expect(
+      isPickGatedCustomAbility(ability({ id: "a1", name: "Minor Arcana", ability_role: "at_will" })),
+    ).toBe(true)
+    // Setbacks are imposed on the character, not chosen from a pool, so they apply while present.
+    expect(
+      isPickGatedCustomAbility(ability({ id: "s1", name: "Grave-Touched", ability_role: "setback" })),
+    ).toBe(false)
+  })
+
+  it("keeps an always-on setback while gating an unpicked breakthrough", () => {
+    const rows = [
+      ability({ id: "s1", name: "Grave-Touched", ability_role: "setback" }),
+      ability({ id: "b1", name: "Spellcasting", ability_role: "breakthrough" }),
+    ]
+    const unlocked = filterUnlockedCustomAbilities(rows, [])
+    expect(unlocked.map((row) => row.name)).toEqual(["Grave-Touched"])
+  })
+
   it("unlocks only selected / granted pick-gated abilities", () => {
     const rows = [
       ability({ id: "d1", name: "Telepathy Discipline", ability_role: "discipline" }),

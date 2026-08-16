@@ -1,3 +1,4 @@
+import { aggregateRoleAbilityOptions } from "@/lib/builder/ability-pool-choices"
 import { aggregateBombFormulaOptions } from "@/lib/builder/aggregate-bomb-formulas"
 import { aggregateDiscoveryOptions } from "@/lib/builder/aggregate-discoveries"
 import { aggregateKnackOptions } from "@/lib/builder/knack-choices"
@@ -364,6 +365,35 @@ export function resolveFeatureChoiceOptions(
       selectedUpgradeNames: selected,
       subclassName: params.subclassName,
     })
+  }
+  if (
+    choices.optionsSource === "class_breakthroughs" ||
+    choices.optionsSource === "class_powers" ||
+    choices.optionsSource === "class_at_wills"
+  ) {
+    const role =
+      choices.optionsSource === "class_breakthroughs"
+        ? "breakthrough"
+        : choices.optionsSource === "class_powers"
+          ? "power"
+          : "at_will"
+    const keyPattern =
+      role === "breakthrough" ? /breakthrough/i : role === "power" ? /power/i : /at.?will/i
+    const pickKey = Object.keys(params.featureChoicePicks).find((key) => keyPattern.test(key))
+    const selected = pickKey
+      ? (params.featureChoicePicks[pickKey] ?? [])
+      : Object.values(params.featureChoicePicks).flat()
+    return filterOptions(
+      aggregateRoleAbilityOptions({
+        customAbilities: params.customAbilities,
+        classNames: params.classNames,
+        classLevel,
+        role,
+        selectedNames: selected,
+        knownSpellNames: params.knownSpellNames,
+        subclassName: params.subclassName,
+      }),
+    )
   }
   if (choices.optionsSource === "class_bomb_formulas") {
     return aggregateBombFormulaOptions({

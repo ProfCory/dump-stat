@@ -716,6 +716,9 @@ function isCustomAbilityAction(ability: CustomAbility): boolean {
   }
   if (ability.ability_role === "psionic_power") return true
   if (ability.ability_role === "alchemist_bomb") return true
+  // Unlocked Powers and At-Wills are activatable capabilities.
+  if (ability.ability_role === "power") return true
+  if (ability.ability_role === "at_will") return true
   if (ability.psionic_augments?.augments?.length) return true
   if (ability.casting_time) return true
   if (ability.execution) return true
@@ -777,6 +780,9 @@ function pushCustomAbilityActions(
       kinds.push("action")
     }
     if (!kinds.length && ability.ability_role === "alchemist_bomb") {
+      kinds.push("action")
+    }
+    if (!kinds.length && (ability.ability_role === "power" || ability.ability_role === "at_will")) {
       kinds.push("action")
     }
     if (!kinds.length) continue

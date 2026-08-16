@@ -9,14 +9,13 @@ import { WelcomeSplashOverlay } from "@/components/home/welcome-splash-overlay"
 import { useAppPresentationMode } from "@/components/settings/use-app-presentation-mode"
 import { SiteFooter } from "@/components/site-footer"
 import { createClient } from "@/lib/db/client"
-import { FEATURE_CARD_IMAGES, LIBRARY_STATS_BACKGROUND } from "@/lib/site-images"
+import { FEATURE_CARD_IMAGES, LIBRARY_STATS_BACKGROUND, SOURCEBOOK_HERO_IMAGE } from "@/lib/site-images"
 import {
   getCustomHeroBackground,
   HERO_BG_CHANGE_EVENT,
 } from "@/lib/site-settings/hero-background"
 
-const SOURCEBOOK_HERO =
-  "https://profcory.github.io/5.5e-Sheets/assets/hero-sourcebook.webp"
+const SOURCEBOOK_HERO = SOURCEBOOK_HERO_IMAGE
 
 const features = [
   {

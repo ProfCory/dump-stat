@@ -11,6 +11,7 @@ import { loadBuilderCompendium } from "@/lib/data/builder-compendium-cache"
 import { asCompendiumRow, asCompendiumRows } from "@/lib/data/types"
 import { characterSheetHref } from "@/lib/compendium/edit-href"
 import { pageFloatingHintClass, pageStepStripClass } from "@/lib/compendium/editor-field-styles"
+import { SourcebookBanner } from "@/components/sourcebook-banner"
 import {
   filterEnabled,
   filterEnabledIds,
@@ -2808,7 +2809,13 @@ export default function BuilderPageClient() {
   return (
     <div id="builder-root" className="min-h-screen bg-background flex flex-col">
       <MainNav />
-      
+      <SourcebookBanner
+        compact
+        eyebrow="The builder"
+        title="Character Builder"
+        description="Build step by step with live calculations for species, backgrounds, levels, spells, and equipment."
+      />
+
       <div id="builder-steps" className={pageStepStripClass}>
         <div className="max-w-7xl mx-auto px-4 pt-3 pb-1">
           <div className="flex items-center justify-center gap-x-1.5 sm:gap-x-0">

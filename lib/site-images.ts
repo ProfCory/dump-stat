@@ -9,6 +9,13 @@ import { withBasePath } from "@/lib/config/deploy-mode"
 
 const hero = (name: string) => withBasePath(`/images/hero/${name}`)
 
+/**
+ * Sourcebook hero artwork used on the home page hero and carried across the app
+ * via <SourcebookBanner> page headers. Single source of truth so every surface
+ * shares the same art.
+ */
+export const SOURCEBOOK_HERO_IMAGE = "https://profcory.github.io/5.5e-Sheets/assets/hero-sourcebook.webp"
+
 /** Hero backgrounds — one chosen at random on the home page */
 export const HERO_ROTATING_IMAGES = [
   hero("rotating-01.webp"),

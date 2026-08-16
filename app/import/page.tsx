@@ -20,6 +20,7 @@ import {
   useImportAiSettings,
 } from "@/components/import/import-ai-settings"
 import { MainNav } from "@/components/main-nav"
+import { SourcebookBanner } from "@/components/sourcebook-banner"
 import {
   pageFloatingHintClass,
 } from "@/lib/compendium/editor-field-styles"
@@ -1003,6 +1004,11 @@ export default function ImportPage() {
   return (
     <div id="import-root" className="min-h-screen bg-background flex flex-col">
       <MainNav />
+      <SourcebookBanner
+        eyebrow="Import & share"
+        title="Import Content"
+        description="Bring in JSON packs, structured homebrew, approved shared content, and Foundry-compatible exports."
+      />
 
       <main id="import-main" className="relative max-w-4xl mx-auto px-4 py-8">
         {/* SRD quickseed — upper right (in-flow on mobile, floating on sm+) */}
@@ -1095,7 +1101,6 @@ export default function ImportPage() {
         </div>
 
         <div id="import-header" className="mb-8 md:pr-[28rem]">
-          <h1 className="text-4xl font-black text-foreground">Import Content</h1>
           {staticMode && (
             <p className={`${pageFloatingHintClass} mt-2`}>
               Storage: {getStorageLabel()}. PDF and server AI import require a hosted deployment with

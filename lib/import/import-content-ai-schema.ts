@@ -402,6 +402,10 @@ const AbilityAiSchema = z.object({
       "bomb_formula",
       "discovery",
       "alchemist_bomb",
+      "breakthrough",
+      "setback",
+      "power",
+      "at_will",
     ])
     .nullable(),
   casting_time: z.string().nullable(),

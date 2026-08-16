@@ -711,4 +711,35 @@ describe("collectSheetActions", () => {
     expect(actions.map((a) => a.name)).not.toContain("Scimitar")
     expect(actions.map((a) => a.name)).not.toContain("Longsword")
   })
+
+  it("surfaces Unlocked Powers and At-Wills as actions even without explicit activation text", () => {
+    const unlocked = (name: string, role: "power" | "at_will") =>
+      ({
+        id: `ua-${name}`,
+        name,
+        // Plain prose with no action keyword — only the role fallback can make it an action.
+        description: "A capability drawn from something you have encountered.",
+        prerequisites: null,
+        characteristics: null,
+        attached_to_type: null,
+        attached_to_id: null,
+        uses: null,
+        show_in_builder: true,
+        ability_role: role,
+        eligible_classes: ["Unlocked"],
+        icon: null,
+        source: "Unlocked (Homebrew)",
+        creator_url: null,
+        created_at: "",
+        updated_at: "",
+      }) as unknown as import("@/lib/types").CustomAbility
+
+    const actions = collectSheetActions({
+      classDetails: [classDetail([], 5)],
+      species: null,
+      customAbilities: [unlocked("Kinetic Push", "power"), unlocked("Minor Arcana", "at_will")],
+    })
+    expect(actions.find((a) => a.name === "Kinetic Push")?.kinds).toEqual(["action"])
+    expect(actions.find((a) => a.name === "Minor Arcana")?.kinds).toEqual(["action"])
+  })
 })

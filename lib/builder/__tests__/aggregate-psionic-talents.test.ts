@@ -315,3 +315,88 @@ describe("resolveFeatureChoiceOptions talent filtering", () => {
     expect(options.map((row) => row.name)).toEqual(["Open Mind"])
   })
 })
+
+describe("resolveFeatureChoiceOptions Unlocked role pools", () => {
+  function unlockedAbility(
+    name: string,
+    role: NonNullable<CustomAbility["ability_role"]>,
+  ): CustomAbility {
+    return {
+      id: `ua-${name}`,
+      name,
+      description: name,
+      prerequisites: null,
+      characteristics: null,
+      attached_to_type: null,
+      attached_to_id: null,
+      uses: null,
+      show_in_builder: true,
+      ability_role: role,
+      eligible_classes: ["Unlocked"],
+      icon: null,
+      source: "Unlocked (Homebrew)",
+      creator_url: null,
+      created_at: "",
+      updated_at: "",
+    }
+  }
+
+  const library = [
+    unlockedAbility("Spellcasting", "breakthrough"),
+    unlockedAbility("Ghost's Toolkit", "breakthrough"),
+    unlockedAbility("Kinetic Push", "power"),
+    unlockedAbility("Minor Arcana", "at_will"),
+  ]
+
+  it("class_breakthroughs resolves only breakthroughs", () => {
+    const feature = {
+      level: 2,
+      name: "Unlocked Breakthroughs",
+      description: "",
+      isChoice: true,
+      choices: { category: "Breakthrough", count: 1, options: [], optionsSource: "class_breakthroughs" as const },
+    } satisfies Feature
+    const options = resolveFeatureChoiceOptions(feature, {
+      customAbilities: library,
+      featureChoicePicks: {},
+      classNames: ["Unlocked"],
+      classLevel: 5,
+    })
+    expect(options.map((o) => o.name).sort()).toEqual(["Ghost's Toolkit", "Spellcasting"])
+  })
+
+  it("class_powers and class_at_wills resolve their own role only", () => {
+    const powerFeature = {
+      level: 1,
+      name: "Prepared Powers",
+      description: "",
+      isChoice: true,
+      choices: { category: "Power", count: 2, options: [], optionsSource: "class_powers" as const },
+    } satisfies Feature
+    const atWillFeature = {
+      level: 1,
+      name: "At-Wills",
+      description: "",
+      isChoice: true,
+      choices: { category: "At-Will", count: 3, options: [], optionsSource: "class_at_wills" as const },
+    } satisfies Feature
+
+    expect(
+      resolveFeatureChoiceOptions(powerFeature, {
+        customAbilities: library,
+        featureChoicePicks: {},
+        classNames: ["Unlocked"],
+        classLevel: 5,
+      }).map((o) => o.name),
+    ).toEqual(["Kinetic Push"])
+
+    expect(
+      resolveFeatureChoiceOptions(atWillFeature, {
+        customAbilities: library,
+        featureChoicePicks: {},
+        classNames: ["Unlocked"],
+        classLevel: 5,
+      }).map((o) => o.name),
+    ).toEqual(["Minor Arcana"])
+  })
+})

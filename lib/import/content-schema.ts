@@ -365,6 +365,9 @@ export const ChoiceOptionsSchema = z.object({
       "class_upgrades",
       "class_bomb_formulas",
       "class_discoveries",
+      "class_breakthroughs",
+      "class_powers",
+      "class_at_wills",
     ])
     .nullable()
     .optional(),
@@ -791,6 +794,10 @@ export const AbilityImportSchema = z.object({
       "bomb_formula",
       "discovery",
       "alchemist_bomb",
+      "breakthrough",
+      "setback",
+      "power",
+      "at_will",
     ])
     .optional(),
   mechanics: z.array(ImportMechanicSchema).optional(),
@@ -801,7 +808,7 @@ const UsesAtLevelImportSchema = z.object({
   count: z.number(),
 })
 
-const UsesConfigImportSchema = z.object({
+export const UsesConfigImportSchema = z.object({
   type: z.enum([
     "fixed",
     "proficiency",
