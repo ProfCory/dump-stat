@@ -78,6 +78,31 @@ describe("Unlocked approved-content pack", () => {
     expect(limitTable[limitTable.length - 1]).toEqual({ level: 17, count: 9 })
   })
 
+  it("wires the Breakthrough / Power / At-Will pickers to role-strict pools", () => {
+    const cls = loadItems().find((i) => i.type === "dnd-class")!.data as Record<string, unknown>
+    const features = cls.features as {
+      name: string
+      isChoice?: boolean
+      choices?: { optionsSource?: string; resourceKey?: string; choiceCountByLevel?: unknown[] }
+    }[]
+
+    const bt = features.find((f) => f.name === "Unlocked Breakthroughs")!
+    expect(bt.isChoice).toBe(true)
+    expect(bt.choices?.optionsSource).toBe("class_breakthroughs")
+    // Cumulative BT totals from the class table: 1 at 2nd up to 21 at 18th.
+    const btTable = bt.choices?.choiceCountByLevel as { level: number; count: number }[]
+    expect(btTable[0]).toEqual({ level: 2, count: 1 })
+    expect(btTable[btTable.length - 1]).toEqual({ level: 18, count: 21 })
+
+    const atWill = features.find((f) => f.name === "At-Wills")!
+    expect(atWill.choices?.optionsSource).toBe("class_at_wills")
+    expect(atWill.choices?.resourceKey).toBe("at_wills")
+
+    const power = features.find((f) => f.name === "Prepared Powers")!
+    expect(power.choices?.optionsSource).toBe("class_powers")
+    expect(power.choices?.resourceKey).toBe("prepared_powers")
+  })
+
   it("attaches all three subclasses to the Unlocked class", () => {
     const subclasses = loadItems()
       .filter((i) => i.type === "dnd-subclass")

@@ -42,7 +42,59 @@
           {
             "level": 2,
             "name": "Unlocked Breakthroughs",
-            "description": "<p>Beginning at 2nd level you gain Unlocked Breakthroughs as shown on the class table. A <strong>Breakthrough</strong> (BT) is a permanent expansion in what your character can access, learn, prepare, use, or become — usually smaller than a conventional feat. Most follow one of two shapes:</p><ul><li><strong>Competency Breakthrough:</strong> gain one or two proficiencies, learned skills, or techniques, usually with one small thematic benefit.</li><li><strong>Gateway Breakthrough:</strong> gain access to a new governed rule, subsystem, discipline, or capability (e.g. Spellcasting, a martial art, firearms, psychic techniques, starship operation). A Gateway BT commonly functions as a prerequisite for related At-Wills, Powers, and further Breakthroughs.</li></ul><p>Breakthroughs never directly increase an Ability Score. If you gain a <strong>Setback</strong> before your next Unlocked level, resolve it at that level-up: <em>Overcome</em> (spend one Breakthrough gained at that level to remove it) or <em>Integrate</em> (keep it and gain one additional Breakthrough at that level).</p>"
+            "description": "<p>Beginning at 2nd level you gain Unlocked Breakthroughs as shown on the class table (cumulative totals: 1 at 2nd rising to 21 by 18th). A <strong>Breakthrough</strong> (BT) is a permanent expansion in what your character can access, learn, prepare, use, or become — usually smaller than a conventional feat. Most follow one of two shapes:</p><ul><li><strong>Competency Breakthrough:</strong> gain one or two proficiencies, learned skills, or techniques, usually with one small thematic benefit.</li><li><strong>Gateway Breakthrough:</strong> gain access to a new governed rule, subsystem, discipline, or capability (e.g. Spellcasting, a martial art, firearms, psychic techniques, starship operation). A Gateway BT commonly functions as a prerequisite for related At-Wills, Powers, and further Breakthroughs.</li></ul><p>Breakthroughs never directly increase an Ability Score. If you gain a <strong>Setback</strong> before your next Unlocked level, resolve it at that level-up: <em>Overcome</em> (spend one Breakthrough gained at that level to remove it) or <em>Integrate</em> (keep it and gain one additional Breakthrough at that level). Subclass Breakthroughs at 6th/14th/18th are chosen separately from your subclass's own list.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Breakthrough",
+              "count": 1,
+              "options": [],
+              "optionsSource": "class_breakthroughs",
+              "choiceCountByLevel": [
+                { "level": 2, "count": 1 },
+                { "level": 3, "count": 2 },
+                { "level": 4, "count": 3 },
+                { "level": 5, "count": 4 },
+                { "level": 6, "count": 5 },
+                { "level": 7, "count": 7 },
+                { "level": 8, "count": 8 },
+                { "level": 9, "count": 10 },
+                { "level": 10, "count": 11 },
+                { "level": 11, "count": 13 },
+                { "level": 12, "count": 14 },
+                { "level": 13, "count": 15 },
+                { "level": 14, "count": 16 },
+                { "level": 15, "count": 18 },
+                { "level": 16, "count": 19 },
+                { "level": 17, "count": 20 },
+                { "level": 18, "count": 21 }
+              ]
+            }
+          },
+          {
+            "level": 1,
+            "name": "At-Wills",
+            "description": "<p>Choose the At-Wills you keep active, as shown on the class table (3 at 1st, rising to 10 at 20th). An At-Will must normally be tied to a Breakthrough, discipline, trait, or governed rule you possess; the GM is the final arbiter of that connection. At-Wills do not expend Power uses.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "At-Will",
+              "count": 3,
+              "options": [],
+              "optionsSource": "class_at_wills",
+              "resourceKey": "at_wills"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Prepared Powers",
+            "description": "<p>Choose the Powers you have prepared and ready, as shown on the class table (2 at 1st, rising to 22 at 20th). You may prepare only Powers whose prerequisites you satisfy and whose tier does not exceed your Power Limit; you reset your prepared Powers when you finish a Long Rest. Track Power uses by tier from the sheet for now.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Power",
+              "count": 2,
+              "options": [],
+              "optionsSource": "class_powers",
+              "resourceKey": "prepared_powers"
+            }
           },
           {
             "level": 3,
