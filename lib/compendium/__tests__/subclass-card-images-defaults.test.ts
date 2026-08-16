@@ -65,6 +65,13 @@ describe("subclass card images", () => {
     walk(sourcesDir)
     sourceSlugs.sort()
 
+    // The full-resolution sources are gitignored (see the folder README) — only the
+    // optimized outputs under public/images are committed. On a fresh checkout (CI,
+    // or any machine without the art staged) the folder holds just .gitkeep/README,
+    // so there are no slugs to compare. This is a local-only check for whoever
+    // regenerates the card art; skip it when the sources aren't present.
+    if (sourceSlugs.length === 0) return
+
     const mappedSlugs = [
       ...new Set(
         Object.values(SUBCLASS_CARD_IMAGES_BY_CLASS_AND_NAME).map((url) => {
