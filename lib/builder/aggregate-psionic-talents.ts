@@ -377,9 +377,13 @@ export function resolveFeatureChoiceOptions(
         : choices.optionsSource === "class_powers"
           ? "power"
           : "at_will"
+    // Exclude the subclass-breakthrough pick key so the general Breakthrough
+    // picker doesn't scoop up subclass picks (both keys contain "breakthrough").
     const keyPattern =
       role === "breakthrough" ? /breakthrough/i : role === "power" ? /power/i : /at.?will/i
-    const pickKey = Object.keys(params.featureChoicePicks).find((key) => keyPattern.test(key))
+    const pickKey = Object.keys(params.featureChoicePicks).find(
+      (key) => keyPattern.test(key) && !/subclass/i.test(key),
+    )
     const selected = pickKey
       ? (params.featureChoicePicks[pickKey] ?? [])
       : Object.values(params.featureChoicePicks).flat()
@@ -392,6 +396,28 @@ export function resolveFeatureChoiceOptions(
         selectedNames: selected,
         knownSpellNames: params.knownSpellNames,
         subclassName: params.subclassName,
+      }),
+    )
+  }
+  if (choices.optionsSource === "class_subclass_breakthroughs") {
+    // Subclass Breakthroughs are scoped to the character's subclass: the options
+    // carry eligible_classes: ["<subclass name>"], so match against that name
+    // rather than the base class. Keeps them out of the general BT pool and vice versa.
+    const subclassName = params.subclassName?.trim()
+    if (!subclassName) return []
+    const pickKey = Object.keys(params.featureChoicePicks).find((key) =>
+      /subclass.*breakthrough|breakthrough.*subclass/i.test(key),
+    )
+    const selected = pickKey ? (params.featureChoicePicks[pickKey] ?? []) : []
+    return filterOptions(
+      aggregateRoleAbilityOptions({
+        customAbilities: params.customAbilities,
+        classNames: [subclassName],
+        classLevel,
+        role: "breakthrough",
+        selectedNames: selected,
+        knownSpellNames: params.knownSpellNames,
+        subclassName,
       }),
     )
   }

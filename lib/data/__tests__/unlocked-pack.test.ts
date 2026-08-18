@@ -110,7 +110,19 @@ describe("Unlocked approved-content pack", () => {
     expect(subclasses.map((s) => s.name).sort()).toEqual(["The Dip", "The Face", "The Planner"])
     for (const subclass of subclasses) {
       expect(subclass.class_name).toBe("Unlocked")
-      expect((subclass.features as unknown[]).length).toBeGreaterThan(0)
+      const features = subclass.features as {
+        name: string
+        choices?: { optionsSource?: string; choiceCountByLevel?: { level: number; count: number }[] }
+      }[]
+      expect(features.length).toBeGreaterThan(0)
+      // Each subclass carries a scoped Subclass Breakthrough picker at 6/14/18.
+      const btPicker = features.find((f) => /Subclass Breakthroughs$/.test(f.name))
+      expect(btPicker?.choices?.optionsSource).toBe("class_subclass_breakthroughs")
+      expect(btPicker?.choices?.choiceCountByLevel).toEqual([
+        { level: 6, count: 1 },
+        { level: 14, count: 2 },
+        { level: 18, count: 3 },
+      ])
     }
   })
 

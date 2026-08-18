@@ -341,11 +341,21 @@ describe("resolveFeatureChoiceOptions Unlocked role pools", () => {
     }
   }
 
+  function subclassAbility(name: string, subclass: string, level: number): CustomAbility {
+    return { ...unlockedAbility(name, "breakthrough"), id: `sc-${name}`, eligible_classes: [subclass], level_requirement: level }
+  }
+
   const library = [
     unlockedAbility("Spellcasting", "breakthrough"),
     unlockedAbility("Ghost's Toolkit", "breakthrough"),
     unlockedAbility("Kinetic Push", "power"),
     unlockedAbility("Minor Arcana", "at_will"),
+  ]
+
+  const withSubclass = [
+    ...library,
+    subclassAbility("Read the Room", "The Face", 6),
+    subclassAbility("Contortionist", "The Dip", 6),
   ]
 
   it("class_breakthroughs resolves only breakthroughs", () => {
@@ -361,6 +371,59 @@ describe("resolveFeatureChoiceOptions Unlocked role pools", () => {
       featureChoicePicks: {},
       classNames: ["Unlocked"],
       classLevel: 5,
+    })
+    expect(options.map((o) => o.name).sort()).toEqual(["Ghost's Toolkit", "Spellcasting"])
+  })
+
+  it("class_subclass_breakthroughs resolves only the character's subclass BTs", () => {
+    const feature = {
+      level: 6,
+      name: "Face Subclass Breakthroughs",
+      description: "",
+      isChoice: true,
+      choices: {
+        category: "Face Subclass Breakthrough",
+        count: 1,
+        options: [],
+        optionsSource: "class_subclass_breakthroughs" as const,
+      },
+    } satisfies Feature
+
+    const options = resolveFeatureChoiceOptions(feature, {
+      customAbilities: withSubclass,
+      featureChoicePicks: {},
+      classNames: ["Unlocked"],
+      classLevel: 6,
+      subclassName: "The Face",
+    })
+    // Only Face's BT — not the Dip's, not the general "Unlocked" breakthroughs.
+    expect(options.map((o) => o.name)).toEqual(["Read the Room"])
+
+    // With no subclass chosen, the subclass picker is empty.
+    expect(
+      resolveFeatureChoiceOptions(feature, {
+        customAbilities: withSubclass,
+        featureChoicePicks: {},
+        classNames: ["Unlocked"],
+        classLevel: 6,
+      }),
+    ).toEqual([])
+  })
+
+  it("general class_breakthroughs never surfaces subclass BTs", () => {
+    const feature = {
+      level: 2,
+      name: "Unlocked Breakthroughs",
+      description: "",
+      isChoice: true,
+      choices: { category: "Breakthrough", count: 1, options: [], optionsSource: "class_breakthroughs" as const },
+    } satisfies Feature
+    const options = resolveFeatureChoiceOptions(feature, {
+      customAbilities: withSubclass,
+      featureChoicePicks: {},
+      classNames: ["Unlocked"],
+      classLevel: 20,
+      subclassName: "The Face",
     })
     expect(options.map((o) => o.name).sort()).toEqual(["Ghost's Toolkit", "Spellcasting"])
   })

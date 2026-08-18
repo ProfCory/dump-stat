@@ -65,6 +65,29 @@ describe("role-strict ability pools", () => {
     expect(options.map((o) => o.name)).toEqual(["Ghost's Toolkit"])
   })
 
+  it("scopes subclass breakthroughs to the subclass name, keeping them out of the general pool", () => {
+    const withSubclass = [
+      ...library,
+      ability({ id: "sb1", name: "Read the Room", ability_role: "breakthrough", eligible_classes: ["The Face"], level_requirement: 6 }),
+      ability({ id: "sb2", name: "Contortionist", ability_role: "breakthrough", eligible_classes: ["The Dip"], level_requirement: 6 }),
+    ]
+    // The general Unlocked pool never shows subclass BTs (their eligible_classes is the subclass name).
+    const general = abilitiesForClassByRole(withSubclass, ["Unlocked"], "breakthrough")
+      .map((a) => a.name)
+      .sort()
+    expect(general).toEqual(["Ghost's Toolkit", "Spellcasting"])
+
+    // The Face picker (scoped by subclass name) shows only Face BTs — not Dip's, not general.
+    const facePool = aggregateRoleAbilityOptions({
+      customAbilities: withSubclass,
+      classNames: ["The Face"],
+      classLevel: 6,
+      role: "breakthrough",
+      selectedNames: [],
+    }).map((o) => o.name)
+    expect(facePool).toEqual(["Read the Room"])
+  })
+
   it("gates options behind a level requirement", () => {
     const gated = [
       ability({ id: "g1", name: "Late BT", ability_role: "breakthrough", level_requirement: 10 }),

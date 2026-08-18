@@ -290,7 +290,19 @@
           {
             "level": 6,
             "name": "Face Subclass Breakthroughs",
-            "description": "<p>Face Breakthroughs emphasize rapport, redirection, de-escalation, gathering information, reputation, social momentum, misdirection, civilian access, reading intent, and conversational control. At each subclass advancement (6th, 14th, 18th) roughly three new Face BTs appropriate to that tier become available; you may take a newly available BT or an earlier Face BT you skipped.</p>"
+            "description": "<p>Face Breakthroughs emphasize rapport, redirection, de-escalation, gathering information, reputation, social momentum, misdirection, civilian access, reading intent, and conversational control. At each subclass advancement (6th, 14th, 18th) roughly three new Face BTs appropriate to that tier become available; you may take a newly available BT or an earlier Face BT you skipped.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Face Subclass Breakthrough",
+              "count": 1,
+              "options": [],
+              "optionsSource": "class_subclass_breakthroughs",
+              "choiceCountByLevel": [
+                { "level": 6, "count": 1 },
+                { "level": 14, "count": 2 },
+                { "level": 18, "count": 3 }
+              ]
+            }
           }
         ]
       }
@@ -323,7 +335,19 @@
           {
             "level": 6,
             "name": "Dip Subclass Breakthroughs",
-            "description": "<p>Dip Breakthroughs emphasize movement, fast hands, infiltration, object interaction, environmental navigation, precision, positioning, bypassing, tight spaces, and rapid physical adaptation. At each subclass advancement (6th, 14th, 18th) roughly three new Dip BTs appropriate to that tier become available; you may take a newly available BT or an earlier Dip BT you skipped.</p>"
+            "description": "<p>Dip Breakthroughs emphasize movement, fast hands, infiltration, object interaction, environmental navigation, precision, positioning, bypassing, tight spaces, and rapid physical adaptation. At each subclass advancement (6th, 14th, 18th) roughly three new Dip BTs appropriate to that tier become available; you may take a newly available BT or an earlier Dip BT you skipped.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Dip Subclass Breakthrough",
+              "count": 1,
+              "options": [],
+              "optionsSource": "class_subclass_breakthroughs",
+              "choiceCountByLevel": [
+                { "level": 6, "count": 1 },
+                { "level": 14, "count": 2 },
+                { "level": 18, "count": 3 }
+              ]
+            }
           }
         ]
       }
@@ -346,7 +370,19 @@
           {
             "level": 6,
             "name": "Planner Subclass Breakthroughs",
-            "description": "<p>Planner Breakthroughs emphasize analysis, prediction, preparation, structural weaknesses, tactical information, puzzles, devices, environmental advantage, enemy behavior, and contingencies. At each subclass advancement (6th, 14th, 18th) roughly three new Planner BTs appropriate to that tier become available; you may take a newly available BT or an earlier Planner BT you skipped.</p>"
+            "description": "<p>Planner Breakthroughs emphasize analysis, prediction, preparation, structural weaknesses, tactical information, puzzles, devices, environmental advantage, enemy behavior, and contingencies. At each subclass advancement (6th, 14th, 18th) roughly three new Planner BTs appropriate to that tier become available; you may take a newly available BT or an earlier Planner BT you skipped.</p>",
+            "isChoice": true,
+            "choices": {
+              "category": "Planner Subclass Breakthrough",
+              "count": 1,
+              "options": [],
+              "optionsSource": "class_subclass_breakthroughs",
+              "choiceCountByLevel": [
+                { "level": 6, "count": 1 },
+                { "level": 14, "count": 2 },
+                { "level": 18, "count": 3 }
+              ]
+            }
           }
         ]
       }

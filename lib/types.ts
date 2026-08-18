@@ -93,6 +93,7 @@ export interface FeatureChoice {
     | "class_breakthroughs"
     | "class_powers"
     | "class_at_wills"
+    | "class_subclass_breakthroughs"
     | null
   /**
    * Links the choice to a class resource whose value scales the number of picks
