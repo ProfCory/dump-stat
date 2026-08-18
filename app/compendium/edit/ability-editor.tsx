@@ -29,6 +29,7 @@ import { normalizeModifierCatalog } from "@/lib/compendium/modifier-catalog"
 import { useModifierCatalog } from "@/hooks/use-modifier-catalog"
 import { useDuplicateCompendiumItem } from "@/hooks/use-duplicate-compendium-item"
 import { readModifierRefs } from "@/lib/compendium/normalize-modifier-refs"
+import { abilityRoleLabel } from "@/lib/compendium/ability-role-labels"
 import {
   CatalogEditor,
   buildCatalogSavePayload,
@@ -84,26 +85,6 @@ const defaultAbility: AbilityFormData = {
   icon: null,
   accent_color: null,
   card_image_url: null,
-}
-
-const ABILITY_ROLE_LABELS: Record<string, string> = {
-  discipline: "Discipline package",
-  psionic_power: "Psionic power",
-  class_talent: "Class talent",
-  talent_pool: "Talent pool (e.g. General Psionic Talents)",
-  knack: "Knack / trick",
-  upgrade: "Upgrade",
-  bomb_formula: "Bomb formula",
-  discovery: "Discovery",
-  alchemist_bomb: "Alchemist bomb",
-  breakthrough: "Breakthrough (Unlocked)",
-  setback: "Setback (Unlocked)",
-  power: "Power (Unlocked)",
-  at_will: "At-Will (Unlocked)",
-}
-
-function abilityRoleLabel(role: string): string {
-  return ABILITY_ROLE_LABELS[role] ?? role.replace(/_/g, " ")
 }
 
 const ATTACH_OPTIONS = [
