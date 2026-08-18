@@ -66,6 +66,14 @@ export const COMPENDIUM_DEFAULT_ICONS: Record<CompendiumContentType, string> = {
   abilities: "magic-trident",
 }
 
+/** Default icon by ability_role, for roles distinctive enough to warrant one (Unlocked class). */
+export const ABILITY_ROLE_DEFAULT_ICONS: Record<string, string> = {
+  breakthrough: "unlocking",
+  setback: "scar-wound",
+  power: "power-ring",
+  at_will: "star-swirl",
+}
+
 export function compendiumListHref(tab: CompendiumContentType): string {
   return `/compendium?tab=${tab}`
 }
@@ -86,6 +94,8 @@ export function getCompendiumItemIcon(
     if (role === "discipline" || /\bdiscipline\b/i.test(String(item.name ?? ""))) {
       return "psychic-waves"
     }
+    const roleIcon = ABILITY_ROLE_DEFAULT_ICONS[role]
+    if (roleIcon) return roleIcon
   }
   if (
     (tab === "equipment" || tab === "magic_items") &&

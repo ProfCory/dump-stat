@@ -45,6 +45,7 @@ import {
 import { buildBulkExportJson, rowToExportItem } from "@/lib/import/dump-stat-export-format"
 import { stripHtml } from "@/lib/import/normalize-equipment"
 import { isTopLevelCompendiumAbility } from "@/lib/import/nest-psionic-ability-library"
+import { abilityRoleLabel } from "@/lib/compendium/ability-role-labels"
 import {
   getCompendiumItemIcon,
   isCompendiumContentType,
@@ -245,6 +246,7 @@ export default function CompendiumPageClient() {
   const [magicItemFilterCategory, setMagicItemFilterCategory] = useState<string>("all")
   const [languageFilterPool, setLanguageFilterPool] = useState<"all" | "standard" | "rare">("all")
   const [toolFilterGroup, setToolFilterGroup] = useState<string>("all")
+  const [abilityFilterRole, setAbilityFilterRole] = useState<string>("all")
   const [backgroundFilterAbilities, setBackgroundFilterAbilities] = useState<AbilityModifierKey[]>([])
   const [backgroundFilterSource, setBackgroundFilterSource] = useState<string>("all")
   const [classResourceFilterClassId, setClassResourceFilterClassId] = useState<string>("all")
@@ -484,6 +486,9 @@ const UNASSIGNED_SPELL_CLASS = "__unassigned__"
         }
         // Nested powers/talents stay hidden unless the user searches for them.
         if (!query && !isTopLevelCompendiumAbility(ability)) return false
+        if (abilityFilterRole !== "all" && (ability.ability_role ?? "") !== abilityFilterRole) {
+          return false
+        }
       }
       if (activeTab === "spells") {
         const spell = item as Spell
@@ -548,6 +553,7 @@ const UNASSIGNED_SPELL_CLASS = "__unassigned__"
 
     return dedupeCompendiumBrowseRows(activeTab, rows)
   }, [
+    abilityFilterRole,
     activeTab,
     backgroundFilterAbilities,
     backgroundFilterSource,
@@ -590,6 +596,15 @@ const UNASSIGNED_SPELL_CLASS = "__unassigned__"
     () => getMagicItemCategoryOptions(magicItemData),
     [magicItemData],
   )
+  const abilityRoleOptions = useMemo(() => {
+    const rows = (content.abilities ?? []) as { ability_role?: string | null }[]
+    const roles = [
+      ...new Set(rows.map((row) => row.ability_role?.trim()).filter((role): role is string => !!role)),
+    ]
+    return roles
+      .sort((a, b) => abilityRoleLabel(a).localeCompare(abilityRoleLabel(b)))
+      .map((value) => ({ value, label: abilityRoleLabel(value) }))
+  }, [content.abilities])
   const equipmentGroups = useMemo(() => {
     if (activeTab !== "equipment") return []
     return groupEquipmentByCategory(filteredContent as unknown as Equipment[])
@@ -1689,6 +1704,37 @@ const UNASSIGNED_SPELL_CLASS = "__unassigned__"
                       setFeatFilterCategory("all")
                       setFeatFilterSource("all")
                     }}
+                    className="px-3 py-2 text-xs font-semibold text-muted-foreground hover:text-foreground bg-muted hover:bg-muted/80 rounded-xl transition-colors"
+                  >
+                    Clear filters
+                  </button>
+                )}
+              </div>
+            )}
+
+            {activeTab === "abilities" && abilityRoleOptions.length > 0 && (
+              <div id="ability-filters" className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <div className="flex items-center gap-2">
+                  <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide whitespace-nowrap">
+                    Role
+                  </label>
+                  <select
+                    value={abilityFilterRole}
+                    onChange={(e) => setAbilityFilterRole(e.target.value)}
+                    className="bg-card border-2 border-border rounded-xl px-3 py-2 text-sm text-foreground focus:outline-none focus:border-primary transition-colors max-w-[16rem]"
+                    aria-label="Filter custom abilities by role"
+                  >
+                    <option value="all">All roles</option>
+                    {abilityRoleOptions.map((role) => (
+                      <option key={role.value} value={role.value}>
+                        {role.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                {abilityFilterRole !== "all" && (
+                  <button
+                    onClick={() => setAbilityFilterRole("all")}
                     className="px-3 py-2 text-xs font-semibold text-muted-foreground hover:text-foreground bg-muted hover:bg-muted/80 rounded-xl transition-colors"
                   >
                     Clear filters
