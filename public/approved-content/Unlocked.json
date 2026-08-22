@@ -86,7 +86,7 @@
           {
             "level": 1,
             "name": "Prepared Powers",
-            "description": "<p>Choose the Powers you have prepared and ready, as shown on the class table (2 at 1st, rising to 22 at 20th). You may prepare only Powers whose prerequisites you satisfy and whose tier does not exceed your Power Limit; you reset your prepared Powers when you finish a Long Rest. Track Power uses by tier from the sheet for now.</p>",
+            "description": "<p>Choose the Powers you have prepared and ready, as shown on the class table (2 at 1st, rising to 22 at 20th). You may prepare only Powers whose prerequisites you satisfy and whose tier does not exceed your Power Limit; you reset your prepared Powers when you finish a Long Rest. Each Power's own uses pool (by Power Level) tracks how many times you can activate it before a Long Rest.</p>",
             "isChoice": true,
             "choices": {
               "category": "Power",
@@ -263,12 +263,166 @@
       "version": 1,
       "data": {
         "class_name": "Unlocked",
-        "resource_key": "power_uses",
-        "name": "Power Uses",
-        "description": "Separate pools of Power uses by tier (Power Levels 1–9). A Power normally consumes one use of the tier at which it is activated; you regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest). Per-level breakdown (tier 1–9): L1 2; L2 3; L3 4/2; L4 4/3; L5 4/3/2; L6 4/3/3; L7 4/3/3/1; L8 4/3/3/2; L9 4/3/3/3/1; L10 4/3/3/3/2; L11 4/3/3/3/2/1; L12 4/3/3/3/2/1; L13 4/3/3/3/2/1/1; L14 4/3/3/3/2/1/1; L15 4/3/3/3/2/1/1/1; L16 4/3/3/3/2/1/1/1; L17 4/3/3/3/2/1/1/1/1; L18 4/3/3/3/3/1/1/1/1; L19 4/3/3/3/3/2/1/1/1; L20 4/3/3/3/3/2/2/1/1. Per-tier spend tracking is planned for a later update; track uses from the sheet for now.",
+        "resource_key": "power_use_tier_1",
+        "name": "Power Uses (Level 1)",
+        "description": "Uses of Power Level 1. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
         "uses": {
-          "type": "special",
-          "specialDescription": "Per-tier Power-use pools; see description for the full per-level table."
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 1, "count": 2 },
+            { "level": 2, "count": 3 },
+            { "level": 3, "count": 4 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_2",
+        "name": "Power Uses (Level 2)",
+        "description": "Uses of Power Level 2. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 3, "count": 2 },
+            { "level": 4, "count": 3 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_3",
+        "name": "Power Uses (Level 3)",
+        "description": "Uses of Power Level 3. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 5, "count": 2 },
+            { "level": 6, "count": 3 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_4",
+        "name": "Power Uses (Level 4)",
+        "description": "Uses of Power Level 4. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 7, "count": 1 },
+            { "level": 8, "count": 2 },
+            { "level": 9, "count": 3 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_5",
+        "name": "Power Uses (Level 5)",
+        "description": "Uses of Power Level 5. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 9, "count": 1 },
+            { "level": 10, "count": 2 },
+            { "level": 18, "count": 3 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_6",
+        "name": "Power Uses (Level 6)",
+        "description": "Uses of Power Level 6. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 11, "count": 1 },
+            { "level": 19, "count": 2 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_7",
+        "name": "Power Uses (Level 7)",
+        "description": "Uses of Power Level 7. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [
+            { "level": 13, "count": 1 },
+            { "level": 20, "count": 2 }
+          ],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_8",
+        "name": "Power Uses (Level 8)",
+        "description": "Uses of Power Level 8. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [{ "level": 15, "count": 1 }],
+          "recharges": [{ "rest": "long_rest" }]
+        }
+      }
+    },
+    {
+      "type": "dnd-class-resource",
+      "version": 1,
+      "data": {
+        "class_name": "Unlocked",
+        "resource_key": "power_use_tier_9",
+        "name": "Power Uses (Level 9)",
+        "description": "Uses of Power Level 9. A Power activated at this tier consumes one use. Regain all expended uses on a Long Rest (Focused Restoration can restore some on a Short Rest).",
+        "uses": {
+          "type": "at_level",
+          "atLevelMode": "tier",
+          "atLevelTable": [{ "level": 17, "count": 1 }],
+          "recharges": [{ "rest": "long_rest" }]
         }
       }
     },

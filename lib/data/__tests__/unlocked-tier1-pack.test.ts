@@ -45,4 +45,19 @@ describe("Unlocked Tier-1 content pack", () => {
     const names = loadAbilities().map((a) => String(a.name))
     expect(new Set(names).size).toBe(names.length)
   })
+
+  it("every Power spends from the class_resource pool matching its own tier", () => {
+    const powers = loadAbilities().filter((a) => a.ability_role === "power")
+    expect(powers).toHaveLength(18)
+    for (const power of powers) {
+      const tierMatch = String(power.description).match(/Power Level (\d)/)
+      expect(tierMatch, String(power.name)).not.toBeNull()
+      const tier = tierMatch![1]
+      expect(power.uses, String(power.name)).toEqual({
+        type: "class_resource",
+        classResourceKey: `power_use_tier_${tier}`,
+        classResourceAmount: 1,
+      })
+    }
+  })
 })

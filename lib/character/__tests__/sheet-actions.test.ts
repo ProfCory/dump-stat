@@ -742,4 +742,37 @@ describe("collectSheetActions", () => {
     expect(actions.find((a) => a.name === "Kinetic Push")?.kinds).toEqual(["action"])
     expect(actions.find((a) => a.name === "Minor Arcana")?.kinds).toEqual(["action"])
   })
+
+  it("resolves a Power's classResourceKey from its own per-tier uses pool", () => {
+    const kineticPush = {
+      id: "power-kinetic-push",
+      name: "Kinetic Push",
+      description: "Push a creature or object.",
+      prerequisites: null,
+      characteristics: null,
+      attached_to_type: null,
+      attached_to_id: null,
+      uses: {
+        type: "class_resource",
+        classResourceKey: "power_use_tier_1",
+        classResourceAmount: 1,
+      },
+      show_in_builder: true,
+      ability_role: "power",
+      eligible_classes: ["Unlocked"],
+      icon: null,
+      source: "Unlocked (Homebrew)",
+      creator_url: null,
+      created_at: "",
+      updated_at: "",
+    } as unknown as import("@/lib/types").CustomAbility
+
+    const actions = collectSheetActions({
+      classDetails: [classDetail([], 5)],
+      species: null,
+      customAbilities: [kineticPush],
+    })
+    const action = actions.find((a) => a.name === "Kinetic Push")
+    expect(action?.classResourceKey).toBe("power_use_tier_1")
+  })
 })
