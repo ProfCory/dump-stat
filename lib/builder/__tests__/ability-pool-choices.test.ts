@@ -31,6 +31,9 @@ const library = [
   ability({ id: "b2", name: "Ghost's Toolkit", ability_role: "breakthrough" }),
   ability({ id: "p1", name: "Kinetic Push", ability_role: "power" }),
   ability({ id: "a1", name: "Minor Arcana", ability_role: "at_will" }),
+  ability({ id: "pa1", name: "Charisma (Primary Ability)", ability_role: "primary_ability" }),
+  ability({ id: "pa2", name: "Dexterity (Primary Ability)", ability_role: "primary_ability" }),
+  ability({ id: "pa3", name: "Intelligence (Primary Ability)", ability_role: "primary_ability" }),
   // Same role but a different class — must never surface for Unlocked.
   ability({ id: "x1", name: "Other Class BT", ability_role: "breakthrough", eligible_classes: ["Wizard"] }),
   // Role-less Unlocked-eligible row — must NOT leak into a role-strict picker.
@@ -110,5 +113,23 @@ describe("role-strict ability pools", () => {
       selectedNames: [],
     })
     expect(atLevel10.some((o) => o.name === "Late BT")).toBe(true)
+  })
+
+  it("presents all three Primary Ability options and never leaks into other pools", () => {
+    const options = aggregateRoleAbilityOptions({
+      customAbilities: library,
+      classNames: ["Unlocked"],
+      classLevel: 1,
+      role: "primary_ability",
+      selectedNames: [],
+    })
+    expect(options.map((o) => o.name).sort()).toEqual([
+      "Charisma (Primary Ability)",
+      "Dexterity (Primary Ability)",
+      "Intelligence (Primary Ability)",
+    ])
+    // The Breakthrough pool never picks up Primary Ability options.
+    const bts = abilitiesForClassByRole(library, ["Unlocked"], "breakthrough")
+    expect(bts.some((a) => a.ability_role === "primary_ability")).toBe(false)
   })
 })

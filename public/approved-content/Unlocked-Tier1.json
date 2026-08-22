@@ -7,6 +7,75 @@
       "type": "dnd-ability",
       "version": 1,
       "data": {
+        "name": "Charisma (Primary Ability)",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "primary_ability",
+        "eligible_classes": [
+          "Unlocked"
+        ],
+        "prerequisites": null,
+        "description": "<p>Your Primary Ability is <strong>Charisma</strong>. This becomes an additional saving throw proficiency alongside Constitution, and points you toward <strong>The Face</strong> at 3rd level (though your subclass choice is not mechanically restricted by this pick). Once chosen, your Primary Ability normally cannot be changed.</p>",
+        "characteristics": [
+          {
+            "id": "unlocked_primary_ability_cha",
+            "type": "saving_throws",
+            "values": [
+              "Charisma"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Dexterity (Primary Ability)",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "primary_ability",
+        "eligible_classes": [
+          "Unlocked"
+        ],
+        "prerequisites": null,
+        "description": "<p>Your Primary Ability is <strong>Dexterity</strong>. This becomes an additional saving throw proficiency alongside Constitution, and points you toward <strong>The Dip</strong> at 3rd level (though your subclass choice is not mechanically restricted by this pick). Once chosen, your Primary Ability normally cannot be changed.</p>",
+        "characteristics": [
+          {
+            "id": "unlocked_primary_ability_dex",
+            "type": "saving_throws",
+            "values": [
+              "Dexterity"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
+        "name": "Intelligence (Primary Ability)",
+        "source": "Unlocked (Homebrew)",
+        "ability_role": "primary_ability",
+        "eligible_classes": [
+          "Unlocked"
+        ],
+        "prerequisites": null,
+        "description": "<p>Your Primary Ability is <strong>Intelligence</strong>. This becomes an additional saving throw proficiency alongside Constitution, and points you toward <strong>The Planner</strong> at 3rd level (though your subclass choice is not mechanically restricted by this pick). Once chosen, your Primary Ability normally cannot be changed.</p>",
+        "characteristics": [
+          {
+            "id": "unlocked_primary_ability_int",
+            "type": "saving_throws",
+            "values": [
+              "Intelligence"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "dnd-ability",
+      "version": 1,
+      "data": {
         "name": "Firearms Familiarity",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",

@@ -369,6 +369,7 @@ export const ChoiceOptionsSchema = z.object({
       "class_powers",
       "class_at_wills",
       "class_subclass_breakthroughs",
+      "class_primary_ability",
     ])
     .nullable()
     .optional(),
@@ -799,6 +800,7 @@ export const AbilityImportSchema = z.object({
       "setback",
       "power",
       "at_will",
+      "primary_ability",
     ])
     .optional(),
   mechanics: z.array(ImportMechanicSchema).optional(),

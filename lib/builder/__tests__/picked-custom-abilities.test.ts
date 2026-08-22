@@ -56,6 +56,12 @@ describe("picked custom abilities", () => {
     expect(
       isPickGatedCustomAbility(ability({ id: "s1", name: "Grave-Touched", ability_role: "setback" })),
     ).toBe(false)
+    // Primary Ability is a genuine player choice — its saving-throw grant only applies once picked.
+    expect(
+      isPickGatedCustomAbility(
+        ability({ id: "pa1", name: "Charisma (Primary Ability)", ability_role: "primary_ability" }),
+      ),
+    ).toBe(true)
   })
 
   it("keeps an always-on setback while gating an unpicked breakthrough", () => {
@@ -210,5 +216,71 @@ describe("discipline/talent pick grants modifiers", () => {
         mod.characteristics?.some((char) => (char as { type?: string }).type === "feature_option_picker"),
       ),
     ).toBeFalsy()
+  })
+})
+
+describe("Primary Ability pick grants the matching saving throw", () => {
+  it("applies the picked Primary Ability's saving_throws characteristic only after pick", () => {
+    // Matches how the Unlocked content pack authors these rows: a plain `characteristics`
+    // field on the CustomAbility (not nested under linked_modifiers).
+    const cha = ability({
+      id: "pa-cha",
+      name: "Charisma (Primary Ability)",
+      ability_role: "primary_ability",
+      characteristics: [{ id: "unlocked_primary_ability_cha", type: "saving_throws", values: ["Charisma"] }],
+    })
+    const dex = ability({
+      id: "pa-dex",
+      name: "Dexterity (Primary Ability)",
+      ability_role: "primary_ability",
+      characteristics: [{ id: "unlocked_primary_ability_dex", type: "saving_throws", values: ["Dexterity"] }],
+    })
+
+    const cls = {
+      id: "unlocked-1",
+      name: "Unlocked",
+      features: [
+        {
+          level: 1,
+          name: "Choose Primary Ability",
+          description: "",
+          isChoice: true,
+          choices: { category: "Primary Ability", count: 1, options: [], optionsSource: "class_primary_ability" },
+        },
+      ] as Feature[],
+    } as DndClass
+
+    const withoutPick = collectBuilderModifierRefIds({
+      catalog: [],
+      speciesTraitPicks: {},
+      feats: [],
+      selectedFeatIds: [],
+      classLevels: [{ classId: "unlocked-1", level: 1 }],
+      classes: [cls],
+      subclasses: [],
+      subclassByClassId: {},
+      featureChoicePicks: {},
+      customAbilities: [cha, dex],
+    })
+    expect(withoutPick.some((mod) => mod.type === "saving_throws")).toBe(false)
+
+    const withPick = collectBuilderModifierRefIds({
+      catalog: [],
+      speciesTraitPicks: {},
+      feats: [],
+      selectedFeatIds: [],
+      classLevels: [{ classId: "unlocked-1", level: 1 }],
+      classes: [cls],
+      subclasses: [],
+      subclassByClassId: {},
+      featureChoicePicks: {
+        "unlocked-1:L1:Choose Primary Ability": ["Charisma (Primary Ability)"],
+      },
+      customAbilities: [cha, dex],
+    })
+    const savingThrows = withPick.filter((mod) => mod.type === "saving_throws")
+    expect(savingThrows).toHaveLength(1)
+    expect(JSON.stringify(savingThrows[0])).toContain("Charisma")
+    expect(JSON.stringify(savingThrows[0])).not.toContain("Dexterity")
   })
 })

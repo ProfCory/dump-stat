@@ -72,6 +72,7 @@ export const ABILITY_ROLE_DEFAULT_ICONS: Record<string, string> = {
   setback: "scar-wound",
   power: "power-ring",
   at_will: "star-swirl",
+  primary_ability: "compass",
 }
 
 export function compendiumListHref(tab: CompendiumContentType): string {

@@ -5,7 +5,7 @@ import { parseDumpStatExportJson } from "@/lib/import/dump-stat-export-format"
 
 const packPath = path.join(process.cwd(), "public/approved-content/Unlocked-Tier1.json")
 
-const UNLOCKED_ROLES = new Set(["breakthrough", "at_will", "power", "setback"])
+const UNLOCKED_ROLES = new Set(["breakthrough", "at_will", "power", "setback", "primary_ability"])
 
 function loadAbilities() {
   const items = parseDumpStatExportJson(fs.readFileSync(packPath, "utf8"))
@@ -28,6 +28,7 @@ describe("Unlocked Tier-1 content pack", () => {
       at_will: 16,
       power: 18,
       setback: 4,
+      primary_ability: 3,
     })
   })
 
@@ -58,6 +59,22 @@ describe("Unlocked Tier-1 content pack", () => {
         classResourceKey: `power_use_tier_${tier}`,
         classResourceAmount: 1,
       })
+    }
+  })
+
+  it("each Primary Ability option grants the matching saving throw", () => {
+    const options = loadAbilities().filter((a) => a.ability_role === "primary_ability")
+    expect(options.map((a) => String(a.name)).sort()).toEqual([
+      "Charisma (Primary Ability)",
+      "Dexterity (Primary Ability)",
+      "Intelligence (Primary Ability)",
+    ])
+    for (const ability of options) {
+      const abilityName = String(ability.name).replace(" (Primary Ability)", "")
+      const characteristics = ability.characteristics as { type: string; values: string[] }[]
+      expect(characteristics, abilityName).toHaveLength(1)
+      expect(characteristics[0].type).toBe("saving_throws")
+      expect(characteristics[0].values).toEqual([abilityName])
     }
   })
 })

@@ -37,9 +37,21 @@ describe("Unlocked approved-content pack", () => {
     expect(cls.spellcasting).toBeNull()
     expect(cls.primary_ability).toEqual(["Charisma", "Dexterity", "Intelligence"])
 
-    const features = cls.features as { level: number; name: string }[]
+    const features = cls.features as {
+      level: number
+      name: string
+      isChoice?: boolean
+      choices?: { category?: string; optionsSource?: string; count?: number }
+    }[]
     // Subclass gate at 3rd, and every ASI milestone present.
     expect(features.some((f) => f.name === "Unlocked Subclass" && f.level === 3)).toBe(true)
+
+    // Choose Primary Ability is a level-1 choice pool wired to the role picker.
+    const primaryAbility = features.find((f) => f.name === "Choose Primary Ability")!
+    expect(primaryAbility.level).toBe(1)
+    expect(primaryAbility.isChoice).toBe(true)
+    expect(primaryAbility.choices?.optionsSource).toBe("class_primary_ability")
+    expect(primaryAbility.choices?.count).toBe(1)
     expect(
       features
         .filter((f) => f.name === "Ability Score Improvement")

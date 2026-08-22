@@ -775,4 +775,33 @@ describe("collectSheetActions", () => {
     const action = actions.find((a) => a.name === "Kinetic Push")
     expect(action?.classResourceKey).toBe("power_use_tier_1")
   })
+
+  it("never surfaces a picked Primary Ability as a sheet action (passive save proficiency only)", () => {
+    const primaryAbility = {
+      id: "pa-cha",
+      name: "Charisma (Primary Ability)",
+      description:
+        "Your Primary Ability is Charisma. This becomes an additional saving throw proficiency alongside Constitution.",
+      prerequisites: null,
+      characteristics: [{ id: "unlocked_primary_ability_cha", type: "saving_throws", values: ["Charisma"] }],
+      attached_to_type: null,
+      attached_to_id: null,
+      uses: null,
+      show_in_builder: true,
+      ability_role: "primary_ability",
+      eligible_classes: ["Unlocked"],
+      icon: null,
+      source: "Unlocked (Homebrew)",
+      creator_url: null,
+      created_at: "",
+      updated_at: "",
+    } as unknown as import("@/lib/types").CustomAbility
+
+    const actions = collectSheetActions({
+      classDetails: [classDetail([], 5)],
+      species: null,
+      customAbilities: [primaryAbility],
+    })
+    expect(actions.some((a) => a.name === "Charisma (Primary Ability)")).toBe(false)
+  })
 })

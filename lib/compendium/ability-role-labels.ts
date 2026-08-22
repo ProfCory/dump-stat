@@ -13,6 +13,7 @@ export const ABILITY_ROLE_LABELS: Record<string, string> = {
   setback: "Setback (Unlocked)",
   power: "Power (Unlocked)",
   at_will: "At-Will (Unlocked)",
+  primary_ability: "Primary Ability (Unlocked)",
 }
 
 export function abilityRoleLabel(role: string): string {
