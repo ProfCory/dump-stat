@@ -350,6 +350,9 @@ describe("resolveFeatureChoiceOptions Unlocked role pools", () => {
     unlockedAbility("Ghost's Toolkit", "breakthrough"),
     unlockedAbility("Kinetic Push", "power"),
     unlockedAbility("Minor Arcana", "at_will"),
+    unlockedAbility("Charisma (Primary Ability)", "primary_ability"),
+    unlockedAbility("Dexterity (Primary Ability)", "primary_ability"),
+    unlockedAbility("Intelligence (Primary Ability)", "primary_ability"),
   ]
 
   const withSubclass = [
@@ -461,5 +464,44 @@ describe("resolveFeatureChoiceOptions Unlocked role pools", () => {
         classLevel: 5,
       }).map((o) => o.name),
     ).toEqual(["Minor Arcana"])
+  })
+
+  it("class_primary_ability resolves all three options and drops the pick once selected", () => {
+    const feature = {
+      level: 1,
+      name: "Choose Primary Ability",
+      description: "",
+      isChoice: true,
+      choices: {
+        category: "Primary Ability",
+        count: 1,
+        options: [],
+        optionsSource: "class_primary_ability" as const,
+      },
+    } satisfies Feature
+
+    const options = resolveFeatureChoiceOptions(feature, {
+      customAbilities: library,
+      featureChoicePicks: {},
+      classNames: ["Unlocked"],
+      classLevel: 1,
+    })
+    expect(options.map((o) => o.name).sort()).toEqual([
+      "Charisma (Primary Ability)",
+      "Dexterity (Primary Ability)",
+      "Intelligence (Primary Ability)",
+    ])
+
+    const afterPick = resolveFeatureChoiceOptions(feature, {
+      customAbilities: library,
+      featureChoicePicks: { "class:Choose Primary Ability": ["Charisma (Primary Ability)"] },
+      classNames: ["Unlocked"],
+      classLevel: 1,
+    })
+    // Non-repeatable — the picked option drops out once selected.
+    expect(afterPick.map((o) => o.name).sort()).toEqual([
+      "Dexterity (Primary Ability)",
+      "Intelligence (Primary Ability)",
+    ])
   })
 })

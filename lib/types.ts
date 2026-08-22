@@ -94,6 +94,7 @@ export interface FeatureChoice {
     | "class_powers"
     | "class_at_wills"
     | "class_subclass_breakthroughs"
+    | "class_primary_ability"
     | null
   /**
    * Links the choice to a class resource whose value scales the number of picks
@@ -771,6 +772,7 @@ export interface CustomAbility {
     | "setback"
     | "power"
     | "at_will"
+    | "primary_ability"
     | null
   /** When true, the character may learn this knack more than once. */
   repeatable?: boolean | null

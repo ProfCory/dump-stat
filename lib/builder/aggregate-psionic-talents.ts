@@ -421,6 +421,23 @@ export function resolveFeatureChoiceOptions(
       }),
     )
   }
+  if (choices.optionsSource === "class_primary_ability") {
+    const pickKey = Object.keys(params.featureChoicePicks).find((key) =>
+      /primary.?ability/i.test(key),
+    )
+    const selected = pickKey ? (params.featureChoicePicks[pickKey] ?? []) : []
+    return filterOptions(
+      aggregateRoleAbilityOptions({
+        customAbilities: params.customAbilities,
+        classNames: params.classNames,
+        classLevel,
+        role: "primary_ability",
+        selectedNames: selected,
+        knownSpellNames: params.knownSpellNames,
+        subclassName: params.subclassName,
+      }),
+    )
+  }
   if (choices.optionsSource === "class_bomb_formulas") {
     return aggregateBombFormulaOptions({
       customAbilities: params.customAbilities,

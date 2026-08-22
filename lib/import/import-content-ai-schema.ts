@@ -406,6 +406,7 @@ const AbilityAiSchema = z.object({
       "setback",
       "power",
       "at_will",
+      "primary_ability",
     ])
     .nullable(),
   casting_time: z.string().nullable(),

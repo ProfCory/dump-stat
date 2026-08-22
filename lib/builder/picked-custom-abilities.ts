@@ -30,7 +30,8 @@ export function isPickGatedAbilityRole(role: string | null | undefined): boolean
     role === "discovery" ||
     role === "breakthrough" ||
     role === "power" ||
-    role === "at_will"
+    role === "at_will" ||
+    role === "primary_ability"
   )
 }
 
