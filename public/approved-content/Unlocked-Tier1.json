@@ -10,7 +10,9 @@
         "name": "Firearms Familiarity",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Competency Breakthrough.</strong> Gain proficiency with a setting-appropriate group of common firearms and one related tool, vehicle, or practical skill chosen with the GM. You can safely load, unload, maintain, and identify routine problems with weapons in that group. May satisfy prerequisites for firearm Powers or more advanced firearm Breakthroughs.</p>"
       }
@@ -22,7 +24,9 @@
         "name": "Spellcasting",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough.</strong> You gain access to a magical tradition you have meaningfully encountered. You now qualify for appropriate magical At-Wills and may prepare magical Powers made available through that tradition, provided they do not exceed your Power Limit. Gain proficiency in Arcana if you do not already have it. You do not necessarily understand magical theory simply because you can use magic.</p>"
       }
@@ -34,7 +38,9 @@
         "name": "Adept Fists",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough.</strong> You have crossed from merely fighting unarmed to understanding a formal martial discipline. Your unarmed strikes deal 1d6 damage, and you gain proficiency in Athletics or Acrobatics. You may now prepare Powers, take Breakthroughs, and meet prerequisites associated with that martial discipline.</p>"
       }
@@ -46,7 +52,9 @@
         "name": "Ghost's Toolkit",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Competency Breakthrough.</strong> Gain proficiency with thieves' tools and one of Sleight of Hand, Stealth, Investigation, or a setting-appropriate burglary tool. When examining an ordinary lock, trap, latch, or concealed access point, the Sheet can identify whether you currently possess the tools and training needed to attempt to bypass it. May serve as prerequisite for more advanced thief, infiltration, or bypass Powers.</p>"
       }
@@ -58,7 +66,9 @@
         "name": "Force Adept",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough (Force-Fantasy / Mystic Space Opera).</strong> You have experienced a pervasive supernatural field and learned to interact with it. Gain one minor Force-like At-Will. You may prepare compatible telekinetic, sensory, enhancement, and mental Powers. You do not necessarily understand the philosophy or religion surrounding the phenomenon.</p>"
       }
@@ -70,7 +80,9 @@
         "name": "Gunslinger",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough (Weird West).</strong> Gain proficiency with setting-appropriate firearms. You can draw and ready a one-handed firearm as part of the same interaction. You may acquire firearm Powers involving trick shots, rapid fire, ricochets, and dueling.</p>"
       }
@@ -82,7 +94,9 @@
         "name": "Neural Interface",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough (Cyberpunk).</strong> Your Sheet can interface with neural implants, augmented interfaces, and compatible digital systems. Gain proficiency in a relevant hacking, electronics, or technical skill/tool. You may prepare cybernetic and hacking Powers you encounter.</p>"
       }
@@ -94,7 +108,9 @@
         "name": "Second Sight",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Competency Breakthrough (Urban Fantasy).</strong> Gain proficiency in Insight, Investigation, Arcana, or Religion. You can perceive obvious supernatural manifestations that mundane people might rationalize away, provided the phenomenon is actually perceptible. You cannot automatically see invisible creatures or penetrate magical concealment.</p>"
       }
@@ -106,7 +122,9 @@
         "name": "Martial Disciple",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough (Martial-Arts World).</strong> Choose a martial style you have observed and trained in. Gain proficiency in Acrobatics or Athletics. Your unarmed strike damage becomes 1d6 if it is lower. You may acquire that style's martial At-Wills, Powers, and higher Breakthroughs.</p>"
       }
@@ -118,7 +136,9 @@
         "name": "Touched by the Gods",
         "source": "Unlocked (Homebrew)",
         "ability_role": "breakthrough",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Gateway Breakthrough (Mythic / Divine World).</strong> You have directly experienced a divine or mythic power acting through the world. Gain proficiency in Religion. Choose one divine principle or patron-domain you have encountered. You may prepare Powers associated with that divine expression; this does not automatically create faith, loyalty, or priestly status.</p>"
       }
@@ -130,7 +150,9 @@
         "name": "Minor Arcana",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Spellcasting or similar magical Gateway BT",
         "description": "<p>Create one harmless magical effect within 30 feet: alter a small sensory detail, clean or soil an object, warm or cool something, create a harmless spark, mark a surface, or perform another prestidigitation-scale effect.</p>"
       }
@@ -142,7 +164,9 @@
         "name": "Elemental Palm",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Elemental or magical access",
         "description": "<p>As an action, produce a brief 10-foot cone of harmless or minimally harmful elemental force (element tied to your unlocked discipline). Can extinguish candles, scatter loose debris, frost a surface, ignite dry tinder, or similar. Not intended as a primary damage option.</p>"
       }
@@ -154,7 +178,9 @@
         "name": "Kinetic Nudge",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Telekinesis, Force, psionics, or similar Gateway BT",
         "description": "<p>Move an unattended object weighing no more than 5 pounds up to 10 feet. You cannot make attacks with it.</p>"
       }
@@ -166,7 +192,9 @@
         "name": "Surface Read",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Psychic or empathic access",
         "description": "<p>When speaking directly with a creature, you can sense its most obvious current emotional state (afraid, angry, confused, amused, suspicious, calm). This does not reveal thoughts or truth.</p>"
       }
@@ -178,7 +206,9 @@
         "name": "Combat Stance",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Martial discipline",
         "description": "<p>As a Bonus Action, adopt a trained stance until the start of your next turn, gaining a minor situational benefit appropriate to the style (e.g. advantage on a check to resist being shoved, or improved weapon control). Individual martial traditions can supply alternate stances.</p>"
       }
@@ -190,7 +220,9 @@
         "name": "CQC Redirect",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Martial Arts or close-quarters Gateway BT",
         "description": "<p>When you successfully Shove a creature, you may move yourself 5 feet without provoking an Opportunity Attack from that creature.</p>"
       }
@@ -202,7 +234,9 @@
         "name": "Quick Draw",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Weapon training",
         "description": "<p>Drawing or stowing a weapon does not interfere with another object interaction you make during the same turn. You may also immediately identify whether a weapon you handle is loaded, ready, or obviously malfunctioning.</p>"
       }
@@ -214,7 +248,9 @@
         "name": "Weapon Check",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Firearms or advanced weapon training",
         "description": "<p>By handling a weapon, you immediately determine whether it is loaded, whether it is damaged, whether it is safe to fire, and whether it requires unusual ammunition or power. You do not automatically understand exotic technology.</p>"
       }
@@ -226,7 +262,9 @@
         "name": "Scan Pulse",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Scanner, cybernetic, technological, or sensor Gateway BT",
         "description": "<p>As an action, scan a nearby object or 10-foot area. You can identify obvious power sources, active electronics, heat, movement, or mechanical irregularities. The exact information depends on the technology available.</p>"
       }
@@ -238,7 +276,9 @@
         "name": "Field Patch",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Medicine, engineering, or repair-related BT",
         "description": "<p>Make trivial field repairs without consuming specialized resources: secure a loose cable, stop superficial bleeding, clear debris from a mechanism, or temporarily fasten broken equipment. Cannot restore Hit Points or repair major damage.</p>"
       }
@@ -250,7 +290,9 @@
         "name": "Lock Sense",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Thief, infiltration, or bypass Gateway BT",
         "description": "<p>When examining a mundane lock, latch, trap mechanism, or concealed opening, your Sheet tells you whether you currently possess the tools and training required to attempt it. It does not reveal the DC or automatically identify hidden traps.</p>"
       }
@@ -262,7 +304,9 @@
         "name": "Light Step",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Mobility or infiltration training",
         "description": "<p>You can move across ordinary noisy surfaces — loose boards, gravel, dry leaves, clutter — without automatically producing conspicuous noise. Stealth checks may still be required.</p>"
       }
@@ -274,7 +318,9 @@
         "name": "Route Read",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Survival, investigation, scout, or similar training",
         "description": "<p>After briefly examining an area, identify the most obvious practical route toward one of: cover, elevation, an exit, concealment, or a defensible position. It does not reveal hidden passages.</p>"
       }
@@ -286,7 +332,9 @@
         "name": "Social Temperature",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Social or Face-oriented BT",
         "description": "<p>After observing a conversation for at least 1 minute, identify the general social mood: cooperative, hostile, nervous, bored, competitive, or deferential. You do not automatically know why.</p>"
       }
@@ -298,7 +346,9 @@
         "name": "Familiar Pattern",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Technical, magical, scholarly, or Planner-oriented BT",
         "description": "<p>When you encounter a symbol, device, ritual structure, formation, or technical layout similar to something you have previously seen, the Sheet identifies that the pattern is familiar. You gain no information about anything you have never encountered.</p>"
       }
@@ -310,7 +360,9 @@
         "name": "Adrenal Control",
         "source": "Unlocked (Homebrew)",
         "ability_role": "at_will",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Physical conditioning, bio-enhancement, or similar BT",
         "description": "<p>You can deliberately regulate breathing, heart rate, and muscle tension: hold still despite stress, slow visibly obvious breathing, steady your hands, or appear calmer than you feel. This does not negate fear or other conditions.</p>"
       }
@@ -322,9 +374,16 @@
         "name": "Kinetic Push",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Force, Telekinesis, Psionics, Gravity, or similar access",
-        "description": "<p><strong>Power Level 1.</strong> Choose one creature or unattended object within 30 feet. A creature makes a Strength save; on a failure, push it up to 10 feet. An unattended object of up to 100 lb is automatically moved. <em>Enhanced:</em> for every Power Level above 1, increase the push by 10 feet and raise the unattended weight limit substantially.</p>"
+        "description": "<p><strong>Power Level 1.</strong> Choose one creature or unattended object within 30 feet. A creature makes a Strength save; on a failure, push it up to 10 feet. An unattended object of up to 100 lb is automatically moved. <em>Enhanced:</em> for every Power Level above 1, increase the push by 10 feet and raise the unattended weight limit substantially.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -334,9 +393,16 @@
         "name": "Burst Step",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Mobility, martial, supernatural movement, or enhancement access",
-        "description": "<p><strong>Power Level 1.</strong> Immediately move up to half your Speed without provoking Opportunity Attacks; this movement can pass through nonmagical Difficult Terrain without additional cost. <em>Enhanced:</em> Power 2 — move up to your Speed; Power 3 — move up to your Speed and briefly travel along walls, across liquid, or over unstable surfaces provided you end on a supporting surface.</p>"
+        "description": "<p><strong>Power Level 1.</strong> Immediately move up to half your Speed without provoking Opportunity Attacks; this movement can pass through nonmagical Difficult Terrain without additional cost. <em>Enhanced:</em> Power 2 — move up to your Speed; Power 3 — move up to your Speed and briefly travel along walls, across liquid, or over unstable surfaces provided you end on a supporting surface.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -346,9 +412,16 @@
         "name": "Reactive Ward",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Magic, Force, technological shielding, psychic defense, etc.",
-        "description": "<p><strong>Power Level 1.</strong> Reaction: when you are hit by an attack, gain +3 AC against that attack, potentially causing it to miss. <em>Enhanced:</em> Power 2 — +4 AC and retain +1 AC until the start of your next turn; Power 3 — +5 AC and retain +2 AC. Flavor as a magical shield, force field, precognitive dodge, hardened skin, or combat algorithm.</p>"
+        "description": "<p><strong>Power Level 1.</strong> Reaction: when you are hit by an attack, gain +3 AC against that attack, potentially causing it to miss. <em>Enhanced:</em> Power 2 — +4 AC and retain +1 AC until the start of your next turn; Power 3 — +5 AC and retain +2 AC. Flavor as a magical shield, force field, precognitive dodge, hardened skin, or combat algorithm.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -358,9 +431,16 @@
         "name": "Emergency Patch",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Healing magic, medicine, nanotech, regeneration, etc.",
-        "description": "<p><strong>Power Level 1.</strong> A creature you touch regains 1d8 + your governing ability modifier Hit Points. <em>Enhanced:</em> add 1d8 healing for every Power Level above 1. Different Gateway BTs explain the same mechanical Power differently.</p>"
+        "description": "<p><strong>Power Level 1.</strong> A creature you touch regains 1d8 + your governing ability modifier Hit Points. <em>Enhanced:</em> add 1d8 healing for every Power Level above 1. Different Gateway BTs explain the same mechanical Power differently.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -370,9 +450,16 @@
         "name": "Perfect Opening",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Martial, firearm, tactical, or precision discipline",
-        "description": "<p><strong>Power Level 1.</strong> Before making an attack, activate this Power: gain advantage on that attack and ignore half cover. <em>Enhanced:</em> Power 2 — ignore three-quarters cover as well; Power 3 — if the attack hits, add one additional weapon damage die.</p>"
+        "description": "<p><strong>Power Level 1.</strong> Before making an attack, activate this Power: gain advantage on that attack and ignore half cover. <em>Enhanced:</em> Power 2 — ignore three-quarters cover as well; Power 3 — if the attack hits, add one additional weapon damage die.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -382,9 +469,16 @@
         "name": "Ghost Access",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Thief, hacking, bypass, infiltration, or similar Gateway BT",
-        "description": "<p><strong>Power Level 1.</strong> For one attempt, treat yourself as having the correct basic equipment to bypass a mundane lock, terminal, seal, or comparable security mechanism you've encountered; you still make the appropriate check. <em>Enhanced:</em> Power 2 — bypass sophisticated security; Power 3 — temporarily interact with systems that normally require specialized credentials or equipment. Never automatically defeats unique plot-level barriers.</p>"
+        "description": "<p><strong>Power Level 1.</strong> For one attempt, treat yourself as having the correct basic equipment to bypass a mundane lock, terminal, seal, or comparable security mechanism you've encountered; you still make the appropriate check. <em>Enhanced:</em> Power 2 — bypass sophisticated security; Power 3 — temporarily interact with systems that normally require specialized credentials or equipment. Never automatically defeats unique plot-level barriers.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_1",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -394,9 +488,16 @@
         "name": "Short Translation",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Teleportation, spatial magic, Force-like movement, tech transporter, etc.",
-        "description": "<p><strong>Power Level 2.</strong> Teleport up to 30 feet to an unoccupied space you can see. <em>Enhanced:</em> Power 3 — 60 feet; Power 4 — 120 feet or bring one willing adjacent creature; Power 5+ — progressively expand passengers, range, or line-of-sight restrictions.</p>"
+        "description": "<p><strong>Power Level 2.</strong> Teleport up to 30 feet to an unoccupied space you can see. <em>Enhanced:</em> Power 3 — 60 feet; Power 4 — 120 feet or bring one willing adjacent creature; Power 5+ — progressively expand passengers, range, or line-of-sight restrictions.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -406,9 +507,16 @@
         "name": "Veil",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Illusion, stealth technology, psychic concealment, etc.",
-        "description": "<p><strong>Power Level 2.</strong> You become difficult to perceive for up to 1 minute — treat as invisibility until you attack, activate an overt Power, or otherwise clearly reveal yourself. <em>Enhanced:</em> Power 3 — one additional willing creature; each Power Level above 3 can add another target or improve duration.</p>"
+        "description": "<p><strong>Power Level 2.</strong> You become difficult to perceive for up to 1 minute — treat as invisibility until you attack, activate an overt Power, or otherwise clearly reveal yourself. <em>Enhanced:</em> Power 3 — one additional willing creature; each Power Level above 3 can add another target or improve duration.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -418,9 +526,16 @@
         "name": "Combat Prediction",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Planner, precognition, tactical AI, Force, combat analysis, etc.",
-        "description": "<p><strong>Power Level 2.</strong> Choose one creature you can see. Until the beginning of your next turn it has disadvantage on its first attack against you, and you have advantage on your first attack or contested check against it. <em>Enhanced:</em> Power 3 — apply to two creatures; Power 4 — duration increases to 1 minute, with a new prediction target chosen each turn.</p>"
+        "description": "<p><strong>Power Level 2.</strong> Choose one creature you can see. Until the beginning of your next turn it has disadvantage on its first attack against you, and you have advantage on your first attack or contested check against it. <em>Enhanced:</em> Power 3 — apply to two creatures; Power 4 — duration increases to 1 minute, with a new prediction target chosen each turn.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -430,9 +545,16 @@
         "name": "Suppressing Burst",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Firearms, energy weapons, magical barrage, etc.",
-        "description": "<p><strong>Power Level 2.</strong> Choose a 15-foot cone or a 20-foot line. Creatures in the area make a Dexterity save; on a failure they take appropriate weapon damage and cannot willingly move toward you until the beginning of your next turn; on a success, half damage and no movement restriction. <em>Enhanced:</em> increase damage by one die per additional Power Level and gradually increase area.</p>"
+        "description": "<p><strong>Power Level 2.</strong> Choose a 15-foot cone or a 20-foot line. Creatures in the area make a Dexterity save; on a failure they take appropriate weapon damage and cannot willingly move toward you until the beginning of your next turn; on a success, half damage and no movement restriction. <em>Enhanced:</em> increase damage by one die per additional Power Level and gradually increase area.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -442,9 +564,16 @@
         "name": "Gravitic Hold",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Gravity, telekinesis, magic, psionics, etc.",
-        "description": "<p><strong>Power Level 2.</strong> One creature within 60 feet makes a Strength save; on a failure its Speed becomes 0 until the end of your next turn. <em>Enhanced:</em> Power 3 — also restrain the target; Power 4+ — affect additional targets or increase duration.</p>"
+        "description": "<p><strong>Power Level 2.</strong> One creature within 60 feet makes a Strength save; on a failure its Speed becomes 0 until the end of your next turn. <em>Enhanced:</em> Power 3 — also restrain the target; Power 4+ — affect additional targets or increase duration.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -454,9 +583,16 @@
         "name": "Accelerated Recovery",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Regeneration, healing, nanotech, magic, bio-adaptation",
-        "description": "<p><strong>Power Level 2.</strong> As a Bonus Action, regain 2d8 + your governing ability modifier Hit Points. <em>Enhanced:</em> add 1d8 per Power Level above 2. At high Power Levels, related Breakthroughs might allow removing conditions instead of simply adding healing.</p>"
+        "description": "<p><strong>Power Level 2.</strong> As a Bonus Action, regain 2d8 + your governing ability modifier Hit Points. <em>Enhanced:</em> add 1d8 per Power Level above 2. At high Power Levels, related Breakthroughs might allow removing conditions instead of simply adding healing.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_2",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -466,9 +602,16 @@
         "name": "Elemental Detonation",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Spellcasting, elemental manipulation, explosives, energy weaponry, etc.",
-        "description": "<p><strong>Power Level 3.</strong> Choose a point within 120 feet. A 20-foot-radius burst deals 6d6 appropriate damage (Dexterity save for half); the source determines damage type and appearance. <em>Enhanced:</em> add 1d6 damage for every Power Level above 3.</p>"
+        "description": "<p><strong>Power Level 3.</strong> Choose a point within 120 feet. A 20-foot-radius burst deals 6d6 appropriate damage (Dexterity save for half); the source determines damage type and appearance. <em>Enhanced:</em> add 1d6 damage for every Power Level above 3.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -478,9 +621,16 @@
         "name": "Impossible Leap",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Martial enhancement, Force, magic, cybernetics, mutation, etc.",
-        "description": "<p><strong>Power Level 3.</strong> As part of your movement, leap up to 60 feet horizontally or 30 feet vertically without a running start; landing does not cause falling damage from this movement. <em>Enhanced:</em> Power 4 — double distance; Power 5 — remain briefly suspended or change direction once during the leap; Power 6+ — approaches true flight.</p>"
+        "description": "<p><strong>Power Level 3.</strong> As part of your movement, leap up to 60 feet horizontally or 30 feet vertically without a running start; landing does not cause falling damage from this movement. <em>Enhanced:</em> Power 4 — double distance; Power 5 — remain briefly suspended or change direction once during the leap; Power 6+ — approaches true flight.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -490,9 +640,16 @@
         "name": "Mental Probe",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Telepathy, psychic abilities, magic, neurological tech, etc.",
-        "description": "<p><strong>Power Level 3.</strong> Choose one creature within 30 feet; it makes a Wisdom save. On a failure, ask one question relating to something it currently knows; you receive an impression, memory fragment, image, phrase, or emotional association that truthfully reflects its knowledge. <em>Enhanced:</em> higher Power Levels allow deeper memories, additional questions, greater range, or multiple creatures. This should not become perfect omniscience.</p>"
+        "description": "<p><strong>Power Level 3.</strong> Choose one creature within 30 feet; it makes a Wisdom save. On a failure, ask one question relating to something it currently knows; you receive an impression, memory fragment, image, phrase, or emotional association that truthfully reflects its knowledge. <em>Enhanced:</em> higher Power Levels allow deeper memories, additional questions, greater range, or multiple creatures. This should not become perfect omniscience.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -502,9 +659,16 @@
         "name": "Structural Collapse",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Planner, engineering, demolition, magic, Force, etc.",
-        "description": "<p><strong>Power Level 3.</strong> After identifying a structural weakness, target a nonmagical structure, vehicle component, construct, or environmental feature. Deal heavy damage and apply an appropriate structural consequence: collapse cover, disable a mechanism, breach a wall, jam a vehicle component, or destroy a support. <em>Enhanced:</em> higher levels affect larger structures, reinforced materials, or magical/advanced constructions.</p>"
+        "description": "<p><strong>Power Level 3.</strong> After identifying a structural weakness, target a nonmagical structure, vehicle component, construct, or environmental feature. Deal heavy damage and apply an appropriate structural consequence: collapse cover, disable a mechanism, breach a wall, jam a vehicle component, or destroy a support. <em>Enhanced:</em> higher levels affect larger structures, reinforced materials, or magical/advanced constructions.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -514,9 +678,16 @@
         "name": "Phase Passage",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Dimensional, magical, psychic, technological, etc.",
-        "description": "<p><strong>Power Level 3.</strong> Move through up to 10 feet of solid nonliving material; you must emerge into an open space you could physically occupy. <em>Enhanced:</em> increase thickness by 10 feet per additional Power Level; at higher levels you may bring willing creatures or remain phased briefly.</p>"
+        "description": "<p><strong>Power Level 3.</strong> Move through up to 10 feet of solid nonliving material; you must emerge into an open space you could physically occupy. <em>Enhanced:</em> increase thickness by 10 feet per additional Power Level; at higher levels you may bring willing creatures or remain phased briefly.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -526,9 +697,16 @@
         "name": "Overclock",
         "source": "Unlocked (Homebrew)",
         "ability_role": "power",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": "Body enhancement, cybernetics, martial mastery, magic, biological adaptation",
-        "description": "<p><strong>Power Level 3.</strong> For 1 minute, choose one: +10 feet Speed; advantage on Strength and Dexterity checks; +2 AC; or one additional reaction each round usable only for movement or defense. <em>Enhanced:</em> Power 4+ choose two options; Power 6+ choose three. A mage calls it enhancement, a cyborg overclocking, a vampire blood acceleration — same framework.</p>"
+        "description": "<p><strong>Power Level 3.</strong> For 1 minute, choose one: +10 feet Speed; advantage on Strength and Dexterity checks; +2 AC; or one additional reaction each round usable only for movement or defense. <em>Enhanced:</em> Power 4+ choose two options; Power 6+ choose three. A mage calls it enhancement, a cyborg overclocking, a vampire blood acceleration — same framework.</p>",
+        "uses": {
+          "type": "class_resource",
+          "classResourceKey": "power_use_tier_3",
+          "classResourceAmount": 1
+        }
       }
     },
     {
@@ -538,7 +716,9 @@
         "name": "Predator's Eyes",
         "source": "Unlocked (Homebrew)",
         "ability_role": "setback",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Setback.</strong> Your eyes adapt to darkness in a way ordinary eyes from your world should not. <em>Adaptation:</em> you gain improved vision in dim conditions. <em>Cost:</em> sudden intense light can overwhelm or impair you.</p>"
       }
@@ -550,7 +730,9 @@
         "name": "Grave-Touched",
         "source": "Unlocked (Homebrew)",
         "ability_role": "setback",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Setback.</strong> Something followed you back from death. <em>Adaptation:</em> you can sense recent death or nearby undead under appropriate circumstances. <em>Cost:</em> some forms of ordinary healing interact poorly with you.</p>"
       }
@@ -562,7 +744,9 @@
         "name": "Perfect Recall",
         "source": "Unlocked (Homebrew)",
         "ability_role": "setback",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Setback.</strong> Your mind stops forgetting in the normal way. <em>Adaptation:</em> you can recall exceptional amounts of detail. <em>Cost:</em> traumatic memories are equally resistant to fading.</p>"
       }
@@ -574,7 +758,9 @@
         "name": "Silver Tongue's Debt",
         "source": "Unlocked (Homebrew)",
         "ability_role": "setback",
-        "eligible_classes": ["Unlocked"],
+        "eligible_classes": [
+          "Unlocked"
+        ],
         "prerequisites": null,
         "description": "<p><strong>Setback.</strong> Something has made your words unnaturally effective, but honesty now has teeth. <em>Adaptation:</em> once per scene, you may reroll a Charisma check. <em>Cost:</em> if you do, within the next minute the truest version of what you actually think is compelled out of you.</p>"
       }

@@ -23,7 +23,8 @@ describe("Unlocked approved-content pack", () => {
     }, {})
     expect(byType).toEqual({
       "dnd-class": 1,
-      "dnd-class-resource": 5,
+      // wild_die, power_limit, prepared_powers, at_wills, + 9 spendable power_use_tier_N pools.
+      "dnd-class-resource": 13,
       "dnd-subclass": 3,
     })
   })
@@ -76,6 +77,42 @@ describe("Unlocked approved-content pack", () => {
     // Highest tier at 1st and 20th matches the table (1 and 9).
     expect(limitTable[0]).toEqual({ level: 1, count: 1 })
     expect(limitTable[limitTable.length - 1]).toEqual({ level: 17, count: 9 })
+  })
+
+  it("gives every Power tier its own spendable, long-rest-recharging use pool", () => {
+    const resources = loadItems()
+      .filter((i) => i.type === "dnd-class-resource")
+      .map((i) => i.data as Record<string, unknown>)
+
+    const tierKeys = Array.from({ length: 9 }, (_, i) => `power_use_tier_${i + 1}`)
+    for (const key of tierKeys) {
+      const resource = resources.find((r) => r.resource_key === key)
+      expect(resource, key).toBeTruthy()
+      const uses = resource!.uses as {
+        type: string
+        atLevelMode?: string
+        atLevelTable: { level: number; count: number }[]
+        recharges: { rest: string }[]
+      }
+      expect(uses.type).toBe("at_level")
+      expect(uses.atLevelMode).toBe("tier")
+      expect(uses.recharges).toEqual([{ rest: "long_rest" }])
+      expect(uses.atLevelTable.length).toBeGreaterThan(0)
+    }
+
+    // Tier 1 matches the class table's Power Level 1 column: 2 at 1st, 3 at 2nd, 4 from 3rd on.
+    const tier1 = resources.find((r) => r.resource_key === "power_use_tier_1")!
+    expect((tier1.uses as { atLevelTable: { level: number; count: number }[] }).atLevelTable).toEqual([
+      { level: 1, count: 2 },
+      { level: 2, count: 3 },
+      { level: 3, count: 4 },
+    ])
+
+    // Tier 9 (the deepest column) only ever reaches 1 use, unlocked at 17th.
+    const tier9 = resources.find((r) => r.resource_key === "power_use_tier_9")!
+    expect((tier9.uses as { atLevelTable: { level: number; count: number }[] }).atLevelTable).toEqual([
+      { level: 17, count: 1 },
+    ])
   })
 
   it("wires the Breakthrough / Power / At-Will pickers to role-strict pools", () => {
